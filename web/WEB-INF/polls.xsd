@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.uts.edu.au/31284/wsd-books" xmlns="http://www.uts.edu.au/31284/wsd-books"
+           elementFormDefault="qualified">
+
+    <xsd:element name="books">
+        <xsd:complexType>
+            <xs:sequence>
+                <xs:element name="book" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="title" type="xsd:string"/>
+                            <xsd:element name="author" type="xsd:string"/>
+                            <xsd:element name="abstractText" type="xsd:string"/>
+                            <xsd:element name="category" type="xsd:string"/>
+                            <xsd:element name="condition" type="xsd:string"/>
+                            <xsd:element name="user" type="xsd:string"/>
+                        </xsd:sequence> 
+                        <xs:attribute name="id" type="xs:integer"/>
+                    </xs:complexType>                      
+                </xs:element>
+            </xs:sequence>
+        </xsd:complexType>
+        
+        <xs:simpleType name="category">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Sci-Fi" />
+				<xs:enumeration value="Romantic" />
+				<xs:enumeration value="Biography" />
+				<xs:enumeration value="Business" />
+				<xs:enumeration value="Technology" />
+			</xs:restriction>
+	</xs:simpleType>
+        
+        <xs:simpleType name="condition">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Excellent" />
+				<xs:enumeration value="Good" />
+				<xs:enumeration value="Poor" />				
+			</xs:restriction>
+	</xs:simpleType>
+        
+        
+        <xsd:simpleType name="date">
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[0-9]{2}-[0-9]{2}-[0-9]{4}"/>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+</xs:schema>
