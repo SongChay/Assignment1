@@ -23,11 +23,7 @@
         <location>Opera house</location>
         <description>Graduation dinner for the new graduates</description>
         <open>true</open>
-        <times>
-            <time>12:45</time>
-            <time>11:50</time>
-            <time>8:49</time>
-        </times>
+       
         <votes>
             <vote>
                 <name>Hello</name>
@@ -42,12 +38,8 @@
 		<location>bondi</location>
 		<description>If this is not a sunny day, we will just kill ourselves
 		</description>
-		<open>false</open>
-		<times>
-			<time>12:45</time>
-			<time>11:50</time>
-			<time>8:49</time>
-		</times>
+		<open>true</open>
+		
 		<votes>
 			<vote>
 				<name>Hello</name>
