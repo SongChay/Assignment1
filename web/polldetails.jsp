@@ -16,12 +16,16 @@
 	String voterEmail = request.getParameter("voterEmail");
 	String closepoll = request.getParameter("closepoll");
 	Poll poll = pollBean.getPolls().findPoll(title);
-	
+        Polls polls = pollBean.getPolls();
+	//if remove is selected
 	if (closepoll != null) {
-		pollBean.getPolls().findPoll(title).setOpen(false);
-		pollBean.save();
+            //don't need the lower 2 trash lines.
+		//pollBean.getPolls().findPoll(title).setOpen(false);
+		//pollBean.save();
+                pollBean.getPolls().removePoll(title);
+                pollBean.updateXML(polls, pollFilePath);
 	}
-%>
+%>  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <c:set var="xmltext">
@@ -38,7 +42,8 @@
 <%
 	if (poll != null) {
 		if (!poll.isOpen()) {
-			out.print("<p>This poll is closed</p>");
+                    //book
+			out.print("<p>This book is reserved</p>");
 		} else if (creator != null && poll != null && creator.getUsername().equals(poll.getCreatorUsername())) {
 			out.print("<close><title>"+poll.getTitle()+"</title></close>");
 		}

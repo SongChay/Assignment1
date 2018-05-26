@@ -41,7 +41,19 @@ public class PollBean implements Serializable {
 		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		m.marshal(polls, new FileOutputStream(pollFilePath));
 	}
-
+        
+        public void updateXML(Polls polls, String pollFilePath) throws Exception {
+        this.polls = polls;
+        this.pollFilePath = pollFilePath;
+        JAXBContext jc = JAXBContext.newInstance(Polls.class);
+        Marshaller m = jc.createMarshaller();
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        FileOutputStream fout = new FileOutputStream(pollFilePath);
+        m.marshal(polls, fout);
+        fout.close();
+    }
+        
+        
 	public Polls getPolls() {
 		return polls;
 	}
