@@ -35,7 +35,7 @@
             }
         %>
     </main>
-    <a href="article.jsp?articleID={@id}">Read More</a>
+  
 </body>
 
 </c:set>

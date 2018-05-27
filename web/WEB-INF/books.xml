@@ -11,7 +11,7 @@
         <condition>Excellent</condition>
         <userUsername>fish</userUsername>
         
-        <reserved>false</reserved>
+        <reserved>true</reserved>
         
         <reserves>
             <reserve>
