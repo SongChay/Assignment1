@@ -1,37 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <books>
-    <book>	
-        <title>picnic</title>
-        <userUsername>bobby</userUsername>
-        <date>22/6/16</date>
-        <location>bondi</location>
-        <description>This is a for a birthday party</description>
-        <reserved>true</reserved>
+    <title name="Chicken">	
+        <book>
+            <userUsername>bobby</userUsername>
+            <condition>Excellent</condition>
+            
+            
+            <reserved>false</reserved>
         
-        <reserves>
-            <reserve>
-                <name>name</name>
-                <email>email</email>
-            </reserve>
+            <reserves>
+                <reserve>
+                    <name>name</name>
+                    <email>email</email>
+                 </reserve>
            
-        </reserves>
-    </book>
-    <book>
-        <title>dinner</title>
-        <userUsername>fish</userUsername>
-        <date>19/4/29</date>
-        <location>Opera house</location>
-        <description>Graduation dinner for the new graduates</description>
-        <reserved>true</reserved>
-       
-        <reserves>
-            <reserve>
-                <name>Hello</name>
-                <email>3243</email>
-            </reserve>
-        </reserves>
-    </book>
-    <book>
+            </reserves>
+        </book>
+        <book>
+            <userUsername>GG</userUsername>
+            <condition>fair</condition>
+            
+            
+            <reserved>true</reserved>
+        
+            <reserves>
+                <reserve>
+                    <name>name</name>
+                    <email>email</email>
+                 </reserve>
+           
+            </reserves>
+        </book>
+        <date>22/6/16</date>
+        <abstractText>This is a for a birthday party</abstractText>
+        <author>Dan Simmons</author>
+        <category>Sci-Fi</category>
+        <quanity>2</quanity>
+    </title>
+   
+    <title name = "Dog">
+        <book>
+            <userUsername>bobby</userUsername>
+            <condition>Good</condition>
+            
+            
+            <reserved>false</reserved>
+        
+            <reserves>
+                <reserve>
+                    <name>name</name>
+                    <email>email</email>
+                 </reserve>
+           
+            </reserves>
+        </book>
+        <date>22/6/16</date>
+        <abstractText>A gold story</abstractText>
+        <author>GG Ryyyan</author>
+        <category>Biography</category>
+        <quanity>1</quanity>
+    </title>
+    <!--
+    gg sample
+    -->
+    
+    <title>
         <title>beach</title>
         <userUsername>fish</userUsername>
         <date>19/4/29</date>
@@ -50,5 +83,5 @@
                 <email>4983</email>
             </reserve>
         </reserves>
-    </book>
+    </title>
 </books>
