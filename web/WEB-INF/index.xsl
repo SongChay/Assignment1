@@ -4,7 +4,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>MeatApp - Register</title>
+				<title>BookApp - Register</title>
 				<style>
 						html,
 					body {

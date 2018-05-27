@@ -68,7 +68,7 @@
 
 	<xsl:template match="navbar">
 		<nav class="navbar">
-			<a class="brand" href="index.jsp">MeatApp</a>
+			<a class="brand" href="index.jsp">BookApp</a>
 			<xsl:apply-templates />
 		</nav>
 	</xsl:template>
