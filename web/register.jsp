@@ -68,7 +68,7 @@
 <p>The username <%=username%> already exists</p>
 <%  
         }
-        out.print("Successfully Registed, click <a href =here to return to login page.");
+        out.print("Successfully Registed, click here to return to login page.");
         
     }
 %>

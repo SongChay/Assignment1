@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <books>
     
-    <book>
-        <id>1</id>
+    <book id = "1">
         <title>Hyperion</title>
         <author>Dan Simmons</author>
         <date>11-12-2008</date>
@@ -23,33 +22,11 @@
         </reserves>
     </book>
     
-    <book>
-        <id>1</id>
-        <title>Hyperion</title>
-        <author>Dan Simmons</author>
-        <date>11-12-2008</date>
-        <category>Science Fiction</category>
-        <abstractText>The novel begins with the Consul receiving a message from Hegemony CEO Meina Gladstone
-            that he is to return to the planet Hyperion as a member of the Shrike Pilgrimage.</abstractText>
-        <condition>Good</condition>
-        <userUsername>bobby</userUsername>
-        
-        <reserved>false</reserved>
-        
-        <reserves>
-            <reserve>
-                <name>name</name>
-                <email>email</email>
-            </reserve>
-           
-        </reserves>
-    </book>
     <!--
     gg sample
     -->
     
-    <book>
-        <id>2</id>
+    <book id = "2">
         <title>GG</title>
         <author>Dan Simmons</author>
         <date>11-12-2008</date>
@@ -66,7 +43,6 @@
                 <name>name</name>
                 <email>email</email>
             </reserve>
-           
         </reserves>
     </book>
 </books>
