@@ -60,7 +60,7 @@
             <username><%= book.getUserUsername()%></username>
             <date><%= book.getDate()%></date>
             <condition><%= book.getCondition()%></condition>
-            <description><%= book.getAbstractText()%></description>	
+            <description><%= book.getDescription()%></description>	
         </details>
         <%
             if (reserved == null && book.isReserved()) {
