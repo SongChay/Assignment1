@@ -57,9 +57,9 @@ public class Books implements Serializable {
             }
         }
 
-        //for (Poll p : list) {
-        //   if (p.getTitle().equals(title)) {
-        //        list.remove(p);
+        //for (Book book : list) {
+        //   if (book.getTitle().equals(title)) {
+        //        list.remove(book);
         //   }
         //} 
         return null;

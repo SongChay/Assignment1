@@ -4,7 +4,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>MeatApp - Poll Details</title>
+				<title>BookApp - Book Details</title>
 				<style>
 					html,
 					body {
@@ -60,7 +60,7 @@
 	</xsl:template>
         
         <xsl:template match="success">
-		<p>Poll Successfully Created</p>
+		<p>Book Successfully Created</p>
 		<p>
 			Click <a href="index.jsp">here</a> to go back to the main page.
 		</p>

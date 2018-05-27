@@ -36,7 +36,7 @@
         <condition>fair</condition>
         <userUsername>fish</userUsername>
         
-        <reserved>true</reserved>
+        <reserved>false</reserved>
         
         <reserves>
             <reserve>

@@ -92,6 +92,10 @@ public class Book implements Serializable {
     public void addReserve(Reserve reserve) {
         reserves.add(reserve);
     }
+    
+    public void removeReserve(Reserve reserve) {
+        reserves.remove(reserve);
+    }
 
     public ArrayList<Reserve> getReserves() {
         return reserves;
