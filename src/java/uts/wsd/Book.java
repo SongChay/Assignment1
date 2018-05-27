@@ -34,6 +34,7 @@ public class Book implements Serializable {
     private String userUsername;
 
     //private boolean open;
+    @XmlElement(name = "reserved")
     private boolean reserved;
 
     @XmlElementWrapper
@@ -54,7 +55,7 @@ public class Book implements Serializable {
         this.description = description;
         this.condition = condition;
         this.userUsername = userUsername;
-
+        this.reserved = reserved;
     }
 
     public int getId() {
