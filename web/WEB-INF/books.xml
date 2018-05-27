@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<books>
+    <book>	
+        <title>picnic</title>
+        <userUsername>bobby</userUsername>
+        <date>22/6/16</date>
+        <location>bondi</location>
+        <description>This is a for a birthday party</description>
+        <reserved>true</reserved>
+        
+        <reserves>
+            <reserve>
+                <name>name</name>
+                <email>email</email>
+            </reserve>
+           
+        </reserves>
+    </book>
+    <book>
+        <title>dinner</title>
+        <userUsername>fish</userUsername>
+        <date>19/4/29</date>
+        <location>Opera house</location>
+        <description>Graduation dinner for the new graduates</description>
+        <reserved>true</reserved>
+       
+        <reserves>
+            <reserve>
+                <name>Hello</name>
+                <email>3243</email>
+            </reserve>
+        </reserves>
+    </book>
+    <book>
+        <title>beach</title>
+        <userUsername>fish</userUsername>
+        <date>19/4/29</date>
+        <location>bondi</location>
+        <description>If this is not a sunny day, we will just kill ourselves
+        </description>
+        <reserved>true</reserved>
+		
+        <reserves>
+            <reserve>
+                <name>Hello</name>
+                <email>3243</email>
+            </reserve>
+            <reserve>
+                <name>qrwe</name>
+                <email>4983</email>
+            </reserve>
+        </reserves>
+    </book>
+</books>

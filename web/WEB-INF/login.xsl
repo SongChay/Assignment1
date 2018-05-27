@@ -4,7 +4,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>MeatApp - Login</title>
+				<title>BookApp - Login</title>
 				<style>
 						html,
 					body {
@@ -41,7 +41,7 @@
 	
 	<xsl:template match="navbar">
 		<nav class="navbar">
-			<h1><a class="brand" href="index.jsp">MeatApp</a></h1>
+			<h1><a class="brand" href="index.jsp">BookApp</a></h1>
 			<xsl:apply-templates />
 		</nav>
 	</xsl:template>

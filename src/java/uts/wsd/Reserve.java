@@ -1,21 +1,20 @@
 package uts.wsd;
 
 import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Vote implements Serializable {
+public class Reserve implements Serializable {
 
 	private String name;
 	private String email;
 
-	public Vote() {
+	public Reserve() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Vote(String name, String email) {
+	public Reserve(String name, String email) {
 		super();
 		this.name = name;
 		this.email = email;

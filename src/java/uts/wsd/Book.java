@@ -11,48 +11,48 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import com.sun.prism.shader.Texture_Color_AlphaTest_Loader;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Poll implements Serializable {
+public class Book implements Serializable {
 
 	private int id;
 	private String title;
-	private String creatorUsername;
-	private String creationDate;
+	private String userUsername;
+	private String date;
 	private String location;
 	private String description;
-	private boolean open;
-	
+	//private boolean open;
+	private boolean reserved;
 	
 
 	@XmlElementWrapper
-	@XmlElement(name = "vote")
-	private ArrayList<Vote> votes = new ArrayList<>();
+	@XmlElement(name = "reserve")
+	private ArrayList<Reserve> reserves = new ArrayList<>();
 
-	public Poll() {
+	public Book() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Poll(String title, String creatorUsername, String creationDate, String location, String description,
-			boolean open) {
+	public Book(String title, String userUsername, String date, String location, String description,
+			boolean reserved) {
 		super();
 		this.title = title;
-		this.creatorUsername = creatorUsername;
-		this.creationDate = creationDate;
+		this.userUsername = userUsername;
+		this.date = date;
 		this.location = location;
 		this.description = description;
-		this.open = open;
+		this.reserved = reserved;
 		
 	}
 
-	public void addVote(Vote vote) {
-		votes.add(vote);
+	public void addReserve(Reserve reserve) {
+		reserves.add(reserve);
 	}
 
-	public ArrayList<Vote> getVotes() {
-		return votes;
+	public ArrayList<Reserve> getReserves() {
+		return reserves;
 	}
 
-	public void setVotes(ArrayList<Vote> votes) {
-		this.votes = votes;
+	public void setReserves(ArrayList<Reserve> reserves) {
+		this.reserves = reserves;
 	}
 
 	public String getDescription() {
@@ -71,20 +71,20 @@ public class Poll implements Serializable {
 		this.title = title;
 	}
 
-	public String getCreatorUsername() {
-		return creatorUsername;
+	public String getUserUsername() {
+		return userUsername;
 	}
 
-	public void setCreatorUsername(String creatorUsername) {
-		this.creatorUsername = creatorUsername;
+	public void setUserUsername(String userUsername) {
+		this.userUsername = userUsername;
 	}
 
-	public String getCreationDate() {
-		return creationDate;
+	public String getDate() {
+		return date;
 	}
 
-	public void setCreationDate(String creationDate) {
-		this.creationDate = creationDate;
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 	public String getLocation() {
@@ -95,12 +95,12 @@ public class Poll implements Serializable {
 		this.location = location;
 	}
 
-	public boolean isOpen() {
-		return open;
+	public boolean isReserved() {
+		return reserved;
 	}
 
-	public void setOpen(boolean open) {
-		this.open = open;
+	public void setReserved(boolean reserved) {
+		this.reserved = reserved;
 	}
 
 

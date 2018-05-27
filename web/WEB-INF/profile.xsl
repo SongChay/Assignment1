@@ -4,7 +4,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title>MeatApp - Profile</title>
+				<title>BookApp - Profile</title>
 				<style>
 					html,
 					body {
@@ -34,7 +34,7 @@
 					text-decoration:none;
 					color: #fff;
 					}
-					.create-poll-button {
+					.create-book-button {
 					text-decoration:none;
 					padding: 12px;
 					background-color: #F44336;
@@ -45,7 +45,7 @@
 					text-align: center;
 					display: block;
 					}
-					.create-poll-button:hover {
+					.create-book-button:hover {
 					box-shadow: 0 2px 16px #555;
 					}
 				</style>
@@ -58,17 +58,17 @@
 	
 	<xsl:template match="main">
 		<section class="main-content">
-			<h1>Your Polls</h1>
-			<div class="polls">
+			<h1>Your Books</h1>
+			<div class="books">
 				<xsl:apply-templates />
 			</div>
-			<a class="create-poll-button" href="createpoll.jsp">Create New Poll</a>
+			<a class="create-book-button" href="createbook.jsp">Create New Book</a>
 		</section>
 	</xsl:template>
 	
-	<xsl:template match="poll">
+	<xsl:template match="book">
 		<p>
-		<a href="polldetails.jsp?polltitle={title}"><xsl:value-of select="title"></xsl:value-of></a>
+		<a href="bookdetails.jsp?booktitle={title}"><xsl:value-of select="title"></xsl:value-of></a>
 		- <xsl:value-of select="status"></xsl:value-of>
 		</p>
 	</xsl:template>

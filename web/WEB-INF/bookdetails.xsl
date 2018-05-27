@@ -34,7 +34,7 @@
 					.medium-text {
 						font-size: 22px;
 					}
-					.create-poll-button {
+					.create-book-button {
 					text-decoration:none;
 					padding: 12px;
 					background-color: #F44336;
@@ -48,7 +48,7 @@
 					border: none;
 					cursor: pointer;
 					}
-					.create-poll-button:hover {
+					.create-book-button:hover {
 					box-shadow: 0 2px 16px #555;
 					}
 				</style>
@@ -89,14 +89,14 @@
 	
 	<xsl:template match="details">
 		<p>Title: <xsl:value-of select="title"></xsl:value-of></p>
-		<p>Creator: <xsl:value-of select="username"></xsl:value-of></p>
-		<p>Creation Date: <xsl:value-of select="date"></xsl:value-of></p>
+		<p>User: <xsl:value-of select="username"></xsl:value-of></p>
+		<p>Listed Date: <xsl:value-of select="date"></xsl:value-of></p>
 		<p>Location: <xsl:value-of select="location"></xsl:value-of></p>
 		<p>Description: <xsl:value-of select="description"></xsl:value-of></p>
 	</xsl:template>
 	
-	<xsl:template match="times">
-		<form action="polldetails.jsp?polltitle={title}" method="post">
+	<xsl:template match="email">
+		<form action="bookdetails.jsp?booketitle={title}" method="post">
 			<input type="hidden" name="voted" value="yes" />
 			<div>
 				<xsl:apply-templates></xsl:apply-templates>
@@ -111,15 +111,15 @@
 	
 	
 	
-	<xsl:template match="reservationg">
-		<p><xsl:value-of select="RName"></xsl:value-of> - <xsl:value-of select="REmail"></xsl:value-of></p>
+	<xsl:template match="reserve">
+		<p><xsl:value-of select="name"></xsl:value-of> - <xsl:value-of select="email"></xsl:value-of></p>
 	</xsl:template>
 	
 	<xsl:template match="close">
-		<form action="polldetails.jsp" method="post">
-			<input type="hidden" name="polltitle" value="{title}" ></input>
-			<input type="hidden" name="closepoll" value="closepoll"></input>
-			<input class="create-poll-button" type="submit" value="Remove Listing"></input>
+		<form action="bookdetails.jsp" method="post">
+			<input type="hidden" name="booketitle" value="{title}" ></input>
+			<input type="hidden" name="closebook" value="closebook"></input>
+			<input class="create-book-button" type="submit" value="Remove Listing"></input>
 		</form>
 	</xsl:template>
 	

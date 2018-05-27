@@ -62,13 +62,13 @@
 	
 	<xsl:template match="main">
 		<section class="main-content">
-			<h2>Meatings</h2>
+			<h2>Books</h2>
 			<xsl:apply-templates />
 		</section>
 	</xsl:template>
 	
 	<xsl:template match="book">
-		<p><xsl:value-of select="username"/> - <a href="polldetails.jsp?polltitle={title}"> <xsl:value-of select="title"/></a></p>
+		<p><xsl:value-of select="username"/> - <a href="bookdetails.jsp?booktitle={title}"> <xsl:value-of select="title"/></a></p>
 	</xsl:template>
 	
 	

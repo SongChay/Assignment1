@@ -80,7 +80,7 @@
 		</form>
 	</xsl:template>
         
-        <xsl:template match="sucess">
+        <xsl:template match="success">
             <p>Register successful</p>
 		
 		<p>Click <a href="index.jsp">here</a> to go to the main page</p>

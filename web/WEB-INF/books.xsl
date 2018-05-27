@@ -69,9 +69,9 @@
 		</div>
 	</xsl:template>
 	
-	<xsl:template match="createpoll">
+	<xsl:template match="createbook">
 	<h2>Enter Poll Details</h2>
-	<form action="createpoll.jsp" method="post">
+	<form action="createbook.jsp" method="post">
 			<table>
 			<tr><td>Title:</td><td><input type="text" name="title" required="true" /></td></tr>  
 			<tr><td>Date: </td><td><input type="text" name="date" required="true" /></td></tr> 
@@ -83,7 +83,7 @@
 			<tr><td>Time 4: </td><td><input type="text" name="time4" /></td></tr>  
 			<tr><td>Time 5: </td><td><input type="text" name="time5" /></td></tr>  
 			<tr><td></td><td><input type="hidden" name="submitted" value="yes" /></td></tr> 
-			<tr><td></td><td><input type="submit" value="Create Poll" /></td></tr>
+			<tr><td></td><td><input type="submit" value="Create Book" /></td></tr>
 			</table>
 		</form>
 	</xsl:template>

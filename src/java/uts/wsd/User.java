@@ -6,16 +6,16 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Creator implements Serializable {
+public class User implements Serializable {
 
 	private String username;
 	private String password;
 	private String email;
 
-	public Creator() {
+	public User() {
 	}
 
-	public Creator(String username, String password, String email) {
+	public User(String username, String password, String email) {
 		super();
 		this.username = username;
 		this.password = password;
