@@ -23,11 +23,14 @@
     }
     if (submitted != null) {
         String title = request.getParameter("title");
+        String author = request.getParameter("author");
         String date = request.getParameter("date");
-        String location = request.getParameter("location");
-        String description = request.getParameter("description");
+        String category = request.getParameter("category");
+        String abstractText = request.getParameter("abstractText");
+        String condition = request.getParameter("condition");
+        Integer id = (bookApplication.getBooks().getList().size() + 1);
 
-        Book book = new Book(title, user.getUsername(), date, location, description, true);
+        Book book = new Book(id, title, author, date, category, abstractText, condition, user.getUsername(), true);
         Books books = bookApplication.getBooks();
         bookApplication.getBooks().addBook(book);
         bookApplication.save();

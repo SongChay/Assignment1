@@ -3,6 +3,7 @@ package uts.wsd;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -11,6 +12,8 @@ public class Books implements Serializable {
 
     @XmlElement(name = "book")
     private ArrayList<Book> list = new ArrayList<>();
+    
+    
 
     public Books() {
         // TODO Auto-generated constructor stub
@@ -25,6 +28,8 @@ public class Books implements Serializable {
         }
         return reservedBooks;
     }
+    
+   
 
     public ArrayList<Book> getBookByUser(String username) {
         ArrayList<Book> books = new ArrayList<>();

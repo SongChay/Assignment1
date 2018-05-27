@@ -18,12 +18,18 @@
 	Book book = bookApplication.getBooks().findBook(title);
         Books books = bookApplication.getBooks();
 	//if remove is selected
+        if(reserved != null){
+        bookApplication.getBooks().findBook(title).setReserved(false);
+		bookApplication.save();
+        
+        }
+        
 	if (closebook != null) {
             //don't need the lower 2 trash lines.
-		//bookApplication.getBooks().findBook(title).setOpen(false);
+		//bookApplication.getBooks().findBook(title).setReserved(false);
 		//bookApplication.save();
-                bookApplication.getBooks().removeBook(title);
-                bookApplication.updateXML(books, bookFilePath);
+          bookApplication.getBooks().removeBook(title);
+            bookApplication.updateXML(books, bookFilePath);
 	}
 %>  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -59,10 +65,11 @@
 	if (reserved == null && book.isReserved()) {
 %>
 	
-	<email>
+<email>	
 		<title><%= book.getTitle() %></title>
 
-	</email>
+</email>
+	
 <% 
 	} else {
 %>

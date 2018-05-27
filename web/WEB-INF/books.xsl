@@ -78,8 +78,8 @@
 			<tr><td>Date: </td><td><input type="text" name="date" required="true" /></td></tr>  
 			<tr><td>Category: </td><td><input type="text" name="category" required ="true" /></td></tr> 
                         <tr><td>Abstract: </td><td><input type="text" name="abstractText" required ="true" /></td></tr>
-                        <tr><td>Condition </td><td><input type="text" name="Condition" required ="true" /></td></tr>
-			 
+                        <tr><td>Condition </td><td><input type="text" name="condition" required ="true" /></td></tr>
+			
 			<tr><td></td><td><input type="hidden" name="submitted" value="yes" /></td></tr> 
 			<tr><td></td><td><input type="submit" value="Create Book" /></td></tr>
 			</table>
