@@ -96,15 +96,15 @@
 	</xsl:template>
 	
 	<xsl:template match="email">
-		<form action="bookdetails.jsp?booketitle={title}" method="post">
-			<input type="hidden" name="voted" value="yes" />
-			<div>
-				<xsl:apply-templates></xsl:apply-templates>
-			</div>
-			<label class="medium-text" for="">Name:</label> <input type="text" required="true" placeholder="Name" name="voterName" />
-			<label class="medium-text" for="">Email</label> <input type="text" required="true" placeholder="Email" name="voterEmail" />
+		<form action="bookdetails.jsp?booktitle={title}" method="post">
+			<input type="hidden" name="reserved" value="yes" />
 			
-                        <input type="submit"  value="vote"/>
+			<label class="medium-text" for="">Name:</label> 
+                        <input type="text" required="true" placeholder="Name" name="reserverName" />
+			<label class="medium-text" for="">Email: </label> 
+                        <input type="text" required="true" placeholder="Email" name="reserverEmail" />
+			
+                        <input type="submit"  value="Reserve"/>
 		</form>
 	</xsl:template>
         
@@ -117,7 +117,7 @@
 	
 	<xsl:template match="close">
 		<form action="bookdetails.jsp" method="post">
-			<input type="hidden" name="booketitle" value="{title}" ></input>
+			<input type="hidden" name="booktitle" value="{title}" ></input>
 			<input type="hidden" name="closebook" value="closebook"></input>
 			<input class="create-book-button" type="submit" value="Remove Listing"></input>
 		</form>
