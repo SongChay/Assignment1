@@ -29,7 +29,8 @@
         String abstractText = request.getParameter("abstractText");
         String condition = request.getParameter("condition");
         Integer id = (bookApplication.getBooks().getList().size() + 1);
-
+        
+        //reserverd (true) = open
         Book book = new Book(id, title, author, date, category, abstractText, condition, user.getUsername(), true);
         Books books = bookApplication.getBooks();
         bookApplication.getBooks().addBook(book);

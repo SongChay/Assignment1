@@ -66,12 +66,16 @@
 } else if (submitted != null && users.userExists(username)) {
 %>
 <p>The username <%=username%> already exists</p>
-<%  
-        }
-        out.print("Successfully Registed, click here to return to login page.");
-        
-    }
+
+<%
+} else {
 %>
+
+    <%
+        out.print("<success></success>");}%>
+    <% }
+    %>
+
 </body>
 </c:set>
 <c:import url="WEB-INF/register.xsl" var="xslt" />
