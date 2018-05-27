@@ -49,7 +49,7 @@ public class PollBean implements Serializable {
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         FileOutputStream fout = new FileOutputStream(pollFilePath);
-        m.marshal(polls, fout);
+        m.marshal(polls , fout);
         fout.close();
     }
         
