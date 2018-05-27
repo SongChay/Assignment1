@@ -83,7 +83,7 @@
         //Reserve reserve = book.bookApplication.getReserves();
         //ArrayList reserve = bookApplication.getBooks().findBook(title).getReserves();
         for (Reserve reserve : bookApplication.getBooks().findBook(title).getReserves()) {
-            //if (reserve.getReserve() <= 1)
+            if (reserve.getName().equals(reserverName) && reserve.getEmail().equals(reserverEmail)){
 %>
     <reserve>
         <name><%= reserve.getName()%></name>
@@ -91,7 +91,7 @@
     </reserve>
     <%
                 break;
-            }
+            }}
         }
     } else {
     %>
