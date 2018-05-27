@@ -72,7 +72,8 @@
     </email>
 
     <%
-    } else {
+    } else if (reserved != null) {
+        if (user != null) {
     %>
     <h2>Reserved By</h2>
 
@@ -83,15 +84,36 @@
         //Reserve reserve = book.bookApplication.getReserves();
         //ArrayList reserve = bookApplication.getBooks().findBook(title).getReserves();
         for (Reserve reserve : bookApplication.getBooks().findBook(title).getReserves()) {
-            if (reserve.getName().equals(reserverName) && reserve.getEmail().equals(reserverEmail)){
-%>
+            // if (reserve.getName().equals(reserverName) && reserve.getEmail().equals(reserverEmail)){
+    %>
     <reserve>
         <name><%= reserve.getName()%></name>
         <email><%= reserve.getEmail()%></email>
     </reserve>
     <%
-                break;
-            }}
+            break;
+        }
+    } else { %>
+    <h2>Reserved By</h2>
+
+    <%
+        bookApplication.getBooks().findBook(title).addReserve(new Reserve(reserverName, reserverEmail));
+        //bookApplication.save();
+        bookApplication.updateXML(books, bookFilePath);
+        //Reserve reserve = book.bookApplication.getReserves();
+        //ArrayList reserve = bookApplication.getBooks().findBook(title).getReserves();
+        for (Reserve reserve : bookApplication.getBooks().findBook(title).getReserves()) {
+            if (reserve.getName().equals(reserverName) && reserve.getEmail().equals(reserverEmail)) {
+    %>
+    <reserve>
+        <name><%= reserve.getName()%></name>
+        <email><%= reserve.getEmail()%></email>
+    </reserve>
+
+    <%
+                    }
+                }
+            }
         }
     } else {
     %>
