@@ -13,13 +13,7 @@
         
         <reserved>true</reserved>
         
-        <reserves>
-            <reserve>
-                <name></name>
-                <email></email>
-            </reserve>
-           
-        </reserves>
+        
     </book>
     
     <!--
@@ -38,11 +32,6 @@
         
         <reserved>true</reserved>
         
-        <reserves>
-            <reserve>
-                <name>name</name>
-                <email>email</email>
-            </reserve>
-        </reserves>
+        
     </book>
 </books>
