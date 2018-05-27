@@ -108,7 +108,7 @@
     <xsl:template match="success">
         <p>Register successful</p>
 		
-        <p>Click <a href="index.jsp">here</a> to go to the main page</p>
+        <p>Click <a href="login">here</a> to go login page</p>
     </xsl:template>
 
 </xsl:stylesheet>
