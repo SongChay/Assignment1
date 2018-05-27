@@ -49,10 +49,11 @@
 </head>
 <%
     if (submitted != null && !users.userExists(username) && passwordsMatch) {
+       
 %>
-<sucess>    
+<success>    
 
-</sucess>
+</success>
 <%
     userApplication.getUsers().addUser(new User(username, password, email));
     userApplication.save();
@@ -68,13 +69,10 @@
 <p>The username <%=username%> already exists</p>
 
 <%
-} else {
+}}
 %>
 
-    <%
-        out.print("<success></success>");}%>
-    <% }
-    %>
+
 
 </body>
 </c:set>
