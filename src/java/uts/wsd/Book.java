@@ -9,100 +9,144 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 
 import com.sun.prism.shader.Texture_Color_AlphaTest_Loader;
+import javax.xml.bind.annotation.XmlAttribute;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Book implements Serializable {
 
-	private int id;
-	private String title;
-	private String userUsername;
-	private String date;
-	private String location;
-	private String description;
-	//private boolean open;
-	private boolean reserved;
-	
+    @XmlAttribute(name = "id")
+    private int id;
+    @XmlElement(name = "title")
+    private String title;
+    @XmlElement(name = "author")
+    private String author;
+    @XmlElement(name = "date")
+    private String date;
+    @XmlElement(name = "location")
+    private String location;
+    @XmlElement(name = "category")
+    private String category;
+    @XmlElement(name = "description")
+    private String description;
+    @XmlElement(name = "condition")
+    private String condition;
+    @XmlElement(name = "userUsername")
+    private String userUsername;
 
-	@XmlElementWrapper
-	@XmlElement(name = "reserve")
-	private ArrayList<Reserve> reserves = new ArrayList<>();
+    //private boolean open;
+    private boolean reserved;
 
-	public Book() {
-		// TODO Auto-generated constructor stub
-	}
+    @XmlElementWrapper
+    @XmlElement(name = "reserve")
+    private ArrayList<Reserve> reserves = new ArrayList<>();
 
-	public Book(String title, String userUsername, String date, String location, String description,
-			boolean reserved) {
-		super();
-		this.title = title;
-		this.userUsername = userUsername;
-		this.date = date;
-		this.location = location;
-		this.description = description;
-		this.reserved = reserved;
-		
-	}
+    public Book() {
+        // TODO Auto-generated constructor stub
+    }
 
-	public void addReserve(Reserve reserve) {
-		reserves.add(reserve);
-	}
+    public Book(Integer id, String title, String author, String date, String category, String description, String condition, String userUsername, boolean reserved) {
+        super();
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.date = date;
+        this.category = category;
+        this.description = description;
+        this.condition = condition;
+        this.userUsername = userUsername;
 
-	public ArrayList<Reserve> getReserves() {
-		return reserves;
-	}
+    }
 
-	public void setReserves(ArrayList<Reserve> reserves) {
-		this.reserves = reserves;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getAuthor() {
+        return author;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getCategory() {
+        return category;
+    }
 
-	public String getUserUsername() {
-		return userUsername;
-	}
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
-	public void setUserUsername(String userUsername) {
-		this.userUsername = userUsername;
-	}
+    public String getCondition() {
+        return condition;
+    }
 
-	public String getDate() {
-		return date;
-	}
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
+    public void addReserve(Reserve reserve) {
+        reserves.add(reserve);
+    }
 
-	public String getLocation() {
-		return location;
-	}
+    public ArrayList<Reserve> getReserves() {
+        return reserves;
+    }
 
-	public void setLocation(String location) {
-		this.location = location;
-	}
+    public void setReserves(ArrayList<Reserve> reserves) {
+        this.reserves = reserves;
+    }
 
-	public boolean isReserved() {
-		return reserved;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setReserved(boolean reserved) {
-		this.reserved = reserved;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getUserUsername() {
+        return userUsername;
+    }
+
+    public void setUserUsername(String userUsername) {
+        this.userUsername = userUsername;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public boolean isReserved() {
+        return reserved;
+    }
+
+    public void setReserved(boolean reserved) {
+        this.reserved = reserved;
+    }
 
 }
