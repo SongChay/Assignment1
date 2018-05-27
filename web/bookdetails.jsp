@@ -20,8 +20,8 @@
     //if remove is selected
     if (reserved != null) {
         bookApplication.getBooks().findBook(title).setReserved(false);
-        //bookApplication.save();
-        bookApplication.updateXML(books, bookFilePath);
+        bookApplication.save();
+        //bookApplication.updateXML(books, bookFilePath);
 
     }
 
@@ -90,7 +90,7 @@
         <email><%= reserve.getEmail()%></email>
     </reserve>
     <%
-
+  break;
             }
         }
     } else {
