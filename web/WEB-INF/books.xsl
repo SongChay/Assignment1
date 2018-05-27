@@ -70,7 +70,7 @@
 	</xsl:template>
 	
 	<xsl:template match="createbook">
-	<h2>Enter Poll Details</h2>
+	<h2>Enter Book Details</h2>
 	<form action="createbook.jsp" method="post">
 			<table>
 			<tr><td>Title:</td><td><input type="text" name="title" required="true" /></td></tr>  

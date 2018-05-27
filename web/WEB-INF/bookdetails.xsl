@@ -90,9 +90,9 @@
 	<xsl:template match="details">
 		<p>Title: <xsl:value-of select="title"></xsl:value-of></p>
 		<p>User: <xsl:value-of select="username"></xsl:value-of></p>
-		<p>Listed Date: <xsl:value-of select="date"></xsl:value-of></p>
-		<p>Location: <xsl:value-of select="location"></xsl:value-of></p>
-		<p>Description: <xsl:value-of select="description"></xsl:value-of></p>
+		<p>Publish Date: <xsl:value-of select="date"></xsl:value-of></p>
+		<p>Condition: <xsl:value-of select="condition"></xsl:value-of></p>
+		<p>Abstract: <xsl:value-of select="description"></xsl:value-of></p>
 	</xsl:template>
 	
 	<xsl:template match="email">

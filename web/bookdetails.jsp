@@ -59,8 +59,8 @@
             <title><%= book.getTitle()%></title>
             <username><%= book.getUserUsername()%></username>
             <date><%= book.getDate()%></date>
-            <location><%= book.getLocation()%></location>
-            <description><%= book.getDescription()%></description>	
+            <condition><%= book.getCondition()%></condition>
+            <description><%= book.getAbstractText()%></description>	
         </details>
         <%
             if (reserved == null && book.isReserved()) {
@@ -84,13 +84,13 @@
         //ArrayList reserve = bookApplication.getBooks().findBook(title).getReserves();
         for (Reserve reserve : bookApplication.getBooks().findBook(title).getReserves()) {
             //if (reserve.getReserve() <= 1)
-    %>
+%>
     <reserve>
         <name><%= reserve.getName()%></name>
         <email><%= reserve.getEmail()%></email>
     </reserve>
     <%
-  break;
+                break;
             }
         }
     } else {

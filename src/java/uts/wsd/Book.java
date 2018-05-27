@@ -22,12 +22,11 @@ public class Book implements Serializable {
     private String author;
     @XmlElement(name = "date")
     private String date;
-    @XmlElement(name = "location")
-    private String location;
+ 
     @XmlElement(name = "category")
     private String category;
-    @XmlElement(name = "description")
-    private String description;
+    @XmlElement(name = "abstractText")
+    private String abstractText;
     @XmlElement(name = "condition")
     private String condition;
     @XmlElement(name = "userUsername")
@@ -45,14 +44,14 @@ public class Book implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
-    public Book(Integer id, String title, String author, String date, String category, String description, String condition, String userUsername, boolean reserved) {
+    public Book(Integer id, String title, String author, String date, String category, String abstractText, String condition, String userUsername, boolean reserved) {
         super();
         this.id = id;
         this.title = title;
         this.author = author;
         this.date = date;
         this.category = category;
-        this.description = description;
+        this.abstractText = abstractText;
         this.condition = condition;
         this.userUsername = userUsername;
         this.reserved = reserved;
@@ -102,12 +101,12 @@ public class Book implements Serializable {
         this.reserves = reserves;
     }
 
-    public String getDescription() {
-        return description;
+    public String getAbstractText() {
+        return abstractText;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAbstractText(String abstractText) {
+        this.abstractText = abstractText;
     }
 
     public String getTitle() {
@@ -134,13 +133,7 @@ public class Book implements Serializable {
         this.date = date;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
+    
 
     public boolean isReserved() {
         return reserved;
