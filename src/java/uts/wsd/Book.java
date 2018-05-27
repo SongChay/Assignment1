@@ -37,7 +37,7 @@ public class Book implements Serializable {
     private boolean reserved;
 
     @XmlElementWrapper
-    @XmlElement(name = "reserve")
+    @XmlElement(name = "reservation")
     private ArrayList<Reserve> reserves = new ArrayList<>();
 
     public Book() {

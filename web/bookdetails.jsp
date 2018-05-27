@@ -78,7 +78,7 @@
 
 
     <%
-        bookApplication.getBooks().findBook(title).addReserve(new Reserve(reserverName, reserverEmail));
+        bookApplication.getBooks().findBook(title).addReserve(new Reserve(book.getTitle(),reserverName, reserverEmail));
         //bookApplication.save();
         bookApplication.updateXML(books, bookFilePath);
         //Reserve reserve = book.bookApplication.getReserves();
