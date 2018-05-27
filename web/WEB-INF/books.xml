@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <books>
     
-    <book id="1">
+    <book>
+        <id>1</id>
         <title>Hyperion</title>
         <author>Dan Simmons</author>
         <date>11-12-2008</date>
@@ -10,6 +11,7 @@
             that he is to return to the planet Hyperion as a member of the Shrike Pilgrimage.</abstractText>
         <condition>Excellent</condition>
         <userUsername>fish</userUsername>
+        
         <reserved>false</reserved>
         
         <reserves>
@@ -21,89 +23,50 @@
         </reserves>
     </book>
     
-    
-    <title name="Chicken">	
-        <book>
-            <userUsername>bobby</userUsername>
-            <condition>Excellent</condition>
-            
-            
-            <reserved>false</reserved>
-        
-            <reserves>
-                <reserve>
-                    <name>name</name>
-                    <email>email</email>
-                </reserve>
-           
-            </reserves>
-        </book>
-        <book>
-            <userUsername>GG</userUsername>
-            <condition>fair</condition>
-            
-            
-            <reserved>true</reserved>
-        
-            <reserves>
-                <reserve>
-                    <name>name</name>
-                    <email>email</email>
-                </reserve>
-           
-            </reserves>
-        </book>
-        <date>22/6/16</date>
-        <abstractText>This is a for a birthday party</abstractText>
+    <book>
+        <id>1</id>
+        <title>Hyperion</title>
         <author>Dan Simmons</author>
-        <category>Sci-Fi</category>
-        <quanity>2</quanity>
-    </title>
-   
-    <title name = "Dog">
-        <book>
-            <userUsername>bobby</userUsername>
-            <condition>Good</condition>
-            
-            
-            <reserved>false</reserved>
+        <date>11-12-2008</date>
+        <category>Science Fiction</category>
+        <abstractText>The novel begins with the Consul receiving a message from Hegemony CEO Meina Gladstone
+            that he is to return to the planet Hyperion as a member of the Shrike Pilgrimage.</abstractText>
+        <condition>Good</condition>
+        <userUsername>bobby</userUsername>
         
-            <reserves>
-                <reserve>
-                    <name>name</name>
-                    <email>email</email>
-                </reserve>
+        <reserved>false</reserved>
+        
+        <reserves>
+            <reserve>
+                <name>name</name>
+                <email>email</email>
+            </reserve>
            
-            </reserves>
-        </book>
-        <date>22/6/16</date>
-        <abstractText>A gold story</abstractText>
-        <author>GG Ryyyan</author>
-        <category>Biography</category>
-        <quanity>1</quanity>
-    </title>
+        </reserves>
+    </book>
     <!--
     gg sample
     -->
     
-    <title>
-        <title>beach</title>
+    <book>
+        <id>2</id>
+        <title>GG</title>
+        <author>Dan Simmons</author>
+        <date>11-12-2008</date>
+        <category>Science Fiction</category>
+        <abstractText>The novel begins with the Consul receiving a message from Hegemony CEO Meina Gladstone
+            that he is to return to the planet Hyperion as a member of the Shrike Pilgrimage.</abstractText>
+        <condition>fair</condition>
         <userUsername>fish</userUsername>
-        <date>19/4/29</date>
-        <location>bondi</location>
-        <description>If this is not a sunny day, we will just kill ourselves
-        </description>
+        
         <reserved>true</reserved>
-		
+        
         <reserves>
             <reserve>
-                <name>Hello</name>
-                <email>3243</email>
+                <name>name</name>
+                <email>email</email>
             </reserve>
-            <reserve>
-                <name>qrwe</name>
-                <email>4983</email>
-            </reserve>
+           
         </reserves>
-    </title>
+    </book>
 </books>
