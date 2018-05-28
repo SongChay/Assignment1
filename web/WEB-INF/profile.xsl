@@ -19,7 +19,7 @@
 					.navbar {
 					width: 100%;
 					height: 40px;
-					background-color: #D32F2F;
+					background-color: #2e76d2;
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
@@ -37,7 +37,7 @@
 					.create-book-button {
 					text-decoration:none;
 					padding: 12px;
-					background-color: #F44336;
+					background-color: #2e76d2;
 					color: #fff;
 					box-shadow: 0 2px 8px #888888;
 					margin: 60px 0; 

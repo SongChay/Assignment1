@@ -16,7 +16,7 @@
                     .navbar {
                     width: 100%;
                     height: 40px;
-                    background-color: #D32F2F;
+                    background-color: #2e76d2;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -86,6 +86,12 @@
                     </td>
                 </tr> 
                 <tr>
+                    <td>Abstract: </td>
+                    <td>
+                        <input type="text" name="abstractText" required ="true" />
+                    </td>
+                </tr>
+                <tr>
                     <td>Date: </td>
                     <td>
                         <input type="text" name="date" required="true" />
@@ -104,20 +110,14 @@
                     </select>
                 </td>
                 <tr>
-                    <td>Abstract: </td>
-                    <td>
-                        <input type="text" name="abstractText" required ="true" />
-                    </td>
-                </tr>
-                <tr>
                     <td>Condition </td>
                     <td>
-                    <select name="condition" required = "true">
-                        <option value="excellent">Excellent</option>
-                        <option value="good">Good</option>
-                        <option value="poor">Poor</option>
-                    </select>
-                </td>
+                        <select name="condition" required = "true">
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </td>
                 </tr>
 			
                 <tr>
