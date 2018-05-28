@@ -68,6 +68,13 @@ public class Books implements Serializable {
     public ArrayList<Book> getList() {
         return list;
     }
+    
+    public int getID (String title){
+        for (Book book : list)
+            if (book.getTitle().equals(title))
+                return book.getId();
+         return -1;
+    }
 
     public Book findBook(String title) {
 
