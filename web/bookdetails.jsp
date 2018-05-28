@@ -21,8 +21,8 @@
     //if remove is selected
     if (reserved != null) {
         bookApplication.getBooks().findBook(title).setReserved(false);
-        bookApplication.save();
-        //bookApplication.updateXML(books, bookFilePath);
+        //bookApplication.save();
+        bookApplication.updateXML(books, bookFilePath);
 
     }
 
@@ -32,6 +32,9 @@
         //bookApplication.save();
         bookApplication.getBooks().removeBook(title);
         bookApplication.updateXML(books, bookFilePath);
+        //want to redirect to page.
+        response.sendRedirect("/MyCoolBookApp/profile.jsp");
+        //window.location.href = "bookdetails.jsp";
     }
 %>  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -57,11 +60,13 @@
                 }
         %>
         <details>
-            <title><%= book.getTitle()%></title>
             <username><%= book.getUserUsername()%></username>
+            <title><%= book.getTitle()%></title>
+            <author><%= book.getAuthor()%></author>
+            <description><%= book.getDescription()%></description>	
+            <category><%= book.getCategory()%></category>
             <date><%= book.getDate()%></date>
             <condition><%= book.getCondition()%></condition>
-            <description><%= book.getDescription()%></description>	
         </details>
         <%
             if (reserved == null && book.isReserved()) {
@@ -78,7 +83,7 @@
 
 
     <%
-        bookApplication.getBooks().findBook(title).addReserve(new Reserve(book.getTitle(),reserverName, reserverEmail));
+        bookApplication.getBooks().findBook(title).addReserve(new Reserve(book.getTitle(), reserverName, reserverEmail));
         //bookApplication.save();
         bookApplication.updateXML(books, bookFilePath);
         //Reserve reserve = book.bookApplication.getReserves();
