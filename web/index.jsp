@@ -30,7 +30,7 @@
         <%
             for (Book book : bookApplication.getBooks().getList()) {
                 if (book.isReserved()) {
-                    out.print("<book><username>" + book.getUserUsername() + "</username><title>" + book.getTitle() + "</title></book>");
+                    out.print("<book><username>" + book.getUserUsername() + "</username><title>" + book.getTitle() + "</title><id>"+book.getId()+"</id></book>");
                 }
             }
         %>
