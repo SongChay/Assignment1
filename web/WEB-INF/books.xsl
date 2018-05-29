@@ -94,28 +94,26 @@
                 <tr>
                     <td>Date: </td>
                     <td>
-                        <input type="text" name="date" required="true" />
+                        <input type="date" name="date" required="true" />
                     </td>
                 </tr>  
                 <td>Category: </td>
                 <td>
                     <select name="category" required = "true">
-                        <option value="Science Fiction">Science Fiction</option>
-                        <option value="Romance">Romance</option>
-                        <option value="Fantasy">Fantasy</option>
-                        <option value="Psychological">Psychological</option>
-                        <option value="Thriller">Thriller</option>
-                        <option value="Health">Health</option>
-                        <option value="Cooking">Cooking</option>
+                        <option value="Sci-Fi">Science Fiction</option>
+                        <option value="Romantic">Romance</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Business">Business</option>
+                        <option value="Technology">Technology</option>                        
                     </select>
                 </td>
                 <tr>
                     <td>Condition </td>
                     <td>
                         <select name="condition" required = "true">
-                            <option value="excellent">Excellent</option>
-                            <option value="good">Good</option>
-                            <option value="poor">Poor</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Poor">Poor</option>
                         </select>
                     </td>
                 </tr>
