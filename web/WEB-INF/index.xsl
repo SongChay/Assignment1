@@ -78,29 +78,37 @@
         </section>
     </xsl:template>
 	
-    <xsl:template match="book">
-        <table border="1">
-            <tr>    
-               
-                <th> Book title</th>
-                <th> Book Author</th>
-                <th> Category</th>
-                <th> Quantity</th>
+    <xsl:template match="books">
+        <table border = "1" width = "100%">
+            <tr>        
+                <th width = "25%"> Book title</th>
+                <th width = "25%"> Book Author</th>
+                <th width = "25%"> Category</th>
+                <th width = "25%"> Quantity</th>
                 
             </tr>
+            
+        </table>
+        
+    </xsl:template>
+        
+    <xsl:template match="book">
+        
+        <table border = "1" width = "100%">
+
             <tr>
-                <td> 
+                <td width = "25%"> 
                     <a href="bookdetails.jsp?booktitle={title}"> 
                         <xsl:value-of select="title"/> 
                     </a>  
                 </td> 
-                <td>
+                <td width = "25%">
                     <xsl:value-of select="author"/>
                 </td>   
-                <td> 
+                <td width = "25%"> 
                     <xsl:value-of select="category"/>   
                 </td>  
-                <td>  
+                <td width = "25%">  
                     <xsl:value-of select="quantity"/> 
                 </td>          
             </tr>

@@ -26,7 +26,7 @@
         %>
     </navbar>
 
-
+    <books></books>
 
     <%
         Books books = bookApplication.getBooks();
