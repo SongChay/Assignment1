@@ -11,13 +11,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Books implements Serializable {
 
-    
     @XmlElement(name = "book")
     private ArrayList<Book> list = new ArrayList<>();
-    
-   
-    
-   
+
     public Books() {
         // TODO Auto-generated constructor stub
     }
@@ -31,8 +27,18 @@ public class Books implements Serializable {
         }
         return reservedBooks;
     }
-    
-   
+
+    public ArrayList<Book> getQuantityBooks(String title) {
+        ArrayList<Book> quantityBooks = new ArrayList<>();
+        for (Book book : list) {
+            if (book.getTitle().matches(title)) {
+                if (book.isReserved()) {
+                    quantityBooks.add(book);
+                }
+            }
+        }
+        return quantityBooks;
+    }
 
     public ArrayList<Book> getBookByUser(String username) {
         ArrayList<Book> books = new ArrayList<>();
@@ -49,7 +55,7 @@ public class Books implements Serializable {
     }
 
     public Book removeBook(String title) {
-        
+
         //Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
         Iterator<Book> iter = list.iterator();
         while (iter.hasNext()) {
@@ -71,26 +77,26 @@ public class Books implements Serializable {
     public ArrayList<Book> getList() {
         return list;
     }
-    
-   
-    
-    public ArrayList<Book> getListTitle(){
+
+    public ArrayList<Book> getListTitle() {
         ArrayList<Book> bookOnce = new ArrayList<>();
-        for (Book book : list)
-            for (Book book1 : bookOnce)
-            if (book.getTitle().equals(book1.getTitle()))
-                bookOnce.add(book);
+        for (Book book : list) {
+            for (Book book1 : bookOnce) {
+                if (book.getTitle().equals(book1.getTitle())) {
+                    bookOnce.add(book);
+                }
+            }
+        }
         return bookOnce;
     }
-    
-    
-   
-    
-    public int getID (String title){
-        for (Book book : list)
-            if (book.getTitle().equals(title))
+
+    public int getID(String title) {
+        for (Book book : list) {
+            if (book.getTitle().equals(title)) {
                 return book.getId();
-         return -1;
+            }
+        }
+        return -1;
     }
 
     public Book findBook(String title) {

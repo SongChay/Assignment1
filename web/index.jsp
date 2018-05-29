@@ -26,18 +26,31 @@
         %>
     </navbar>
 
-    <main>
-      
-        <%  
-            
-            for (Book book : bookApplication.getBooks().getList()) {
+
+
+    <%
+        Books books = bookApplication.getBooks();
+
+        for (Book book : bookApplication.getBooks().getList()) {
+            Integer quantity = bookApplication.getBooks().getQuantityBooks(book.getTitle()).size();
+
+            if (books.getQuantityBooks(book.getTitle()).contains(book)) {
+
                 if (book.isReserved()) {
-                    out.print("<book><category>" + book.getCategory() + "</category><author>" + book.getAuthor() + "</author><title>"+book.getTitle()+"</title><quantity></quantity></book>");
+
+                    if (bookApplication.getBooks().getQuantityBooks(book.getTitle()).isEmpty() == false) {
+
+                        out.print("<book><category>" + book.getCategory() + "</category><author>" + book.getAuthor() + "</author><title>" + book.getTitle() + "</title><quantity>" + quantity + "</quantity></book>");
+
+                    }
                 }
             }
-        %>
-    </main>
-  
+
+        }
+
+    %>
+
+
 </body>
 
 </c:set>
