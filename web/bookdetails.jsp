@@ -55,7 +55,7 @@
                 if (!book.getInfo().isReserved()) {
                     //book
                     out.print("<p>This book is reserved</p>");
-                } else if (user != null && book != null && user.getUsername().equals(book.getUserUsername())) {
+                } else if (user != null && book != null && user.getUsername().equals(book.getInfo().getUserUsername())) {
                     out.print("<close><title>" + book.getTitle() + "</title></close>");
                 }
         %>
