@@ -22,6 +22,7 @@
             bookexists = true;
         }
     }
+   
     if (submitted != null) {
         String title = request.getParameter("title");
         String author = request.getParameter("author");
@@ -37,6 +38,7 @@
         bookApplication.getBooks().addBook(book);
         bookApplication.save();
         bookApplication.updateXML(books, bookFilepath);
+       
         }   
         else {
         Integer noID = (bookApplication.getBooks().getList().size());

@@ -72,6 +72,12 @@
 		</form>
 	</table>
 	</xsl:template>
+        <xsl:template match="fail">
+            <p>Incorrect username or password. Please try again</p>
+		
+        <p>or Click <a href="register.jsp">here</a> to register.</p>
+            
+        </xsl:template>>
 	
 	<xsl:template match="success">
 		<p>Login successful</p>

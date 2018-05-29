@@ -5,16 +5,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Books implements Serializable {
 
+    
     @XmlElement(name = "book")
     private ArrayList<Book> list = new ArrayList<>();
     
+   
     
-
+   
     public Books() {
         // TODO Auto-generated constructor stub
     }
@@ -68,6 +71,20 @@ public class Books implements Serializable {
     public ArrayList<Book> getList() {
         return list;
     }
+    
+   
+    
+    public ArrayList<Book> getListTitle(){
+        ArrayList<Book> bookOnce = new ArrayList<>();
+        for (Book book : list)
+            for (Book book1 : bookOnce)
+            if (book.getTitle().equals(book1.getTitle()))
+                bookOnce.add(book);
+        return bookOnce;
+    }
+    
+    
+   
     
     public int getID (String title){
         for (Book book : list)

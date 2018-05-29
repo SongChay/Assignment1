@@ -27,10 +27,12 @@
     </navbar>
 
     <main>
-        <%
+      
+        <%  
+            
             for (Book book : bookApplication.getBooks().getList()) {
                 if (book.isReserved()) {
-                    out.print("<book><username>" + book.getUserUsername() + "</username><title>" + book.getTitle() + "</title><id>"+book.getId()+"</id></book>");
+                    out.print("<book><category>" + book.getCategory() + "</category><author>" + book.getAuthor() + "</author><title>"+book.getTitle()+"</title><quantity></quantity></book>");
                 }
             }
         %>

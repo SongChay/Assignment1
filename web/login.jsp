@@ -42,8 +42,9 @@
         } else {
             out.print("<main><username>" + username + "</username></main>");
             if (submitted != null) {
-                out.print("<p>Username or password is incorrect</p>");
-            }
+                 %>
+    <fail></fail>
+ <%           }
         }
     %>
 </body>
