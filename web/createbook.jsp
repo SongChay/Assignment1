@@ -41,7 +41,7 @@
        
         }   
         else {
-        Integer noID = (bookApplication.getBooks().getList().size());
+        Integer noID = (bookApplication.getBooks().getList().size()) + 1;
         Book book = new Book(noID, title, author, date, category, abstractText, condition, user.getUsername(), true);
         Books books = bookApplication.getBooks();
         bookApplication.getBooks().addBook(book);
