@@ -20,7 +20,7 @@
     Books books = bookApplication.getBooks();
     //if remove is selected
     if (reserved != null) {
-        bookApplication.getBooks().findBook(title).setReserved(false);
+        bookApplication.getBooks().findBook(title).getInfo().setReserved(false);
         //bookApplication.save();
         bookApplication.updateXML(books, bookFilePath);
 
@@ -52,7 +52,7 @@
 
         <%
             if (book != null) {
-                if (!book.isReserved()) {
+                if (!book.getInfo().isReserved()) {
                     //book
                     out.print("<p>This book is reserved</p>");
                 } else if (user != null && book != null && user.getUsername().equals(book.getUserUsername())) {
@@ -60,16 +60,16 @@
                 }
         %>
         <details>
-            <username><%= book.getUserUsername()%></username>
+            <username><%= book.getInfo().getUserUsername()%></username>
             <title><%= book.getTitle()%></title>
             <author><%= book.getAuthor()%></author>
             <description><%= book.getDescription()%></description>	
             <category><%= book.getCategory()%></category>
             <date><%= book.getDate()%></date>
-            <condition><%= book.getCondition()%></condition>
+            <condition><%= book.getInfo().getCondition()%></condition>
         </details>
         <%
-            if (reserved == null && book.isReserved()) {
+            if (reserved == null && book.getInfo().isReserved()) {
         %>
 
     <email>	

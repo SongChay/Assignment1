@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <books>
-    
-  
-   
+
+
+
     <book id = "1">
         <title>Hyperion</title>
         <author>Dan Simmons</author>
@@ -10,19 +10,25 @@
         <category>Science Fiction</category>
         <description>The novel begins with the Consul receiving a message from Hegemony CEO Meina Gladstone
             that he is to return to the planet Hyperion as a member of the Shrike Pilgrimage.</description>
-        <condition>Excellent</condition>
-        <userUsername>fish</userUsername>
-        <reserved>true</reserved>         
+        <info>
+            <condition>Excellent</condition>
+
+            <userUsername>fish</userUsername>
+
+            <reserved>true</reserved>
+        </info>
     </book>
-      
-        
-      
+
+    
+
+
+
     <!--
     gg sample
     -->
 
-   
-       
+
+
     <book id="2">
         <title>GG</title>
         <author>Dan Simmons</author>
@@ -30,14 +36,14 @@
         <category>Science Fiction</category>
         <description>The novel begins with the Consul receiving a message from Hegemony CEO Meina Gladstone
             that he is to return to the planet Hyperion as a member of the Shrike Pilgrimage.</description>
-        
+            <info>
         <condition>fair</condition>
         <userUsername>fish</userUsername>
-        
-        <reserved>true</reserved>
-     
-    </book>
-   
 
-    
+        <reserved>true</reserved>
+</info>
+    </book>
+
+
+
 </books>

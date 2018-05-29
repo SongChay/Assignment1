@@ -13,7 +13,8 @@ public class Books implements Serializable {
 
     @XmlElement(name = "book")
     private ArrayList<Book> list = new ArrayList<>();
-
+    
+   
     public Books() {
         // TODO Auto-generated constructor stub
     }
@@ -21,7 +22,7 @@ public class Books implements Serializable {
     public ArrayList<Book> getReservedBooks() {
         ArrayList<Book> reservedBooks = new ArrayList<>();
         for (Book book : list) {
-            if (book.isReserved()) {
+            if (book.getInfo().isReserved()) {
                 reservedBooks.add(book);
             }
         }
@@ -32,18 +33,19 @@ public class Books implements Serializable {
         ArrayList<Book> quantityBooks = new ArrayList<>();
         for (Book book : list) {
             if (book.getTitle().matches(title)) {
-                if (book.isReserved()) {
+                if (book.getInfo().isReserved()) {
                     quantityBooks.add(book);
                 }
             }
         }
         return quantityBooks;
     }
+ 
 
     public ArrayList<Book> getBookByUser(String username) {
         ArrayList<Book> books = new ArrayList<>();
         for (Book book : list) {
-            if (book.getUserUsername().equals(username)) {
+            if (book.getInfo().getUserUsername().equals(username)) {
                 books.add(book);
             }
         }
@@ -78,17 +80,7 @@ public class Books implements Serializable {
         return list;
     }
 
-    public ArrayList<Book> getListTitle() {
-        ArrayList<Book> bookOnce = new ArrayList<>();
-        for (Book book : list) {
-            for (Book book1 : bookOnce) {
-                if (book.getTitle().equals(book1.getTitle())) {
-                    bookOnce.add(book);
-                }
-            }
-        }
-        return bookOnce;
-    }
+   
 
     public int getID(String title) {
         for (Book book : list) {

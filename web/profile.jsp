@@ -28,7 +28,7 @@
                 }
 
                 for (Book book : books) {
-                    out.print("<book><title>" + book.getTitle() + "</title><status>" + (book.isReserved() ? "listing" : "reserved") + "</status></book>");
+                    out.print("<book><title>" + book.getTitle() + "</title><status>" + (book.getInfo().isReserved() ? "listing" : "reserved") + "</status></book>");
                 }
 
                 out.print("</main>");

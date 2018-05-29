@@ -27,14 +27,9 @@ public class Book implements Serializable {
     private String category;
     @XmlElement(name = "description")
     private String description;
-    @XmlElement(name = "condition")
-    private String condition;
-    @XmlElement(name = "userUsername")
-    private String userUsername;
 
-    //private boolean open;
-    @XmlElement(name = "reserved")
-    private boolean reserved;
+    @XmlElement(name = "info")
+    private Info info;
 
     @XmlElementWrapper
     @XmlElement(name = "reservation")
@@ -44,7 +39,7 @@ public class Book implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
-    public Book(Integer id, String title, String author, String date, String category, String description, String condition, String userUsername, boolean reserved) {
+    public Book(Integer id, String title, String author, String date, String category, String description, Info info ) {
         super();
         this.id = id;
         this.title = title;
@@ -52,9 +47,8 @@ public class Book implements Serializable {
         this.date = date;
         this.category = category;
         this.description = description;
-        this.condition = condition;
-        this.userUsername = userUsername;
-        this.reserved = reserved;
+        this.info = info;
+       
     }
 
     public int getId() {
@@ -81,13 +75,7 @@ public class Book implements Serializable {
         this.category = category;
     }
 
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
-        this.condition = condition;
-    }
+   
 
     public void addReserve(Reserve reserve) {
         reserves.add(reserve);
@@ -121,13 +109,7 @@ public class Book implements Serializable {
         this.title = title;
     }
 
-    public String getUserUsername() {
-        return userUsername;
-    }
-
-    public void setUserUsername(String userUsername) {
-        this.userUsername = userUsername;
-    }
+   
 
     public String getDate() {
         return date;
@@ -137,14 +119,15 @@ public class Book implements Serializable {
         this.date = date;
     }
 
+    public Info getInfo() {
+        return info;
+    }
+
+    public void setInfo(Info info) {
+        this.info = info;
+    }
+
     
 
-    public boolean isReserved() {
-        return reserved;
-    }
-
-    public void setReserved(boolean reserved) {
-        this.reserved = reserved;
-    }
 
 }

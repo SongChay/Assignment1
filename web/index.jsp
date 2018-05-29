@@ -33,10 +33,10 @@
 
         for (Book book : bookApplication.getBooks().getList()) {
             Integer quantity = bookApplication.getBooks().getQuantityBooks(book.getTitle()).size();
-
+          //    for (String s : bookApplication.getBooks().getListTitle()){
             if (books.getQuantityBooks(book.getTitle()).contains(book)) {
 
-                if (book.isReserved()) {
+                if (book.getInfo().isReserved()) {
 
                     if (bookApplication.getBooks().getQuantityBooks(book.getTitle()).isEmpty() == false) {
 
