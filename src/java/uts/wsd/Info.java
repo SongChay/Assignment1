@@ -19,7 +19,8 @@ public class Info implements Serializable {
 	private boolean reserved;
 
 	public Info() {
-		// TODO Auto-generated constructor stub
+		
+            
 	}
 
 	public Info(String condition, String userUsername, boolean reserved) {

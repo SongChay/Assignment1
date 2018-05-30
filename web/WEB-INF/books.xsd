@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.uts.edu.au/31284/wsd-books" xmlns="http://www.uts.edu.au/31284/wsd-books"
-           elementFormDefault="qualified">
+	targetNamespace="http://www.uts.edu.au/31284/wsd-books" 
+           xmlns="http://www.uts.edu.au/31284/wsd-books"
+	elementFormDefault="qualified">
 
     <xsd:element name="books">
         <xsd:complexType>
@@ -10,11 +11,13 @@
                     <xs:complexType>
                         <xsd:sequence>
                             <xsd:element name="title" type="xsd:string"/>
-                            <xsd:element name="author" type="xsd:string"/>
-                            <xsd:element name="abstractText" type="xsd:string"/>
                             <xsd:element name="category" type="xsd:string"/>
+                            <xsd:element name="author" type="xsd:string"/>
+                            <xsd:element name="description" type="xsd:string"/>
+                            
                             <xsd:element name="condition" type="xsd:string"/>
-                            <xsd:element name="user" type="xsd:string"/>
+                            <xsd:element name="userUsername" type="xsd:string"/>
+                            
                         </xsd:sequence> 
                         <xs:attribute name="id" type="xs:integer"/>
                     </xs:complexType>                      

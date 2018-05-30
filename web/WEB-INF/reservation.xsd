@@ -5,8 +5,31 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-<xs:schema version="1.0"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.uts.edu.au/31284/wsd-reservations" 
+           xmlns="http://www.uts.edu.au/31284/wsd-reservations"
+	elementFormDefault="qualified">
+    
+    <xs:simpleType name="email">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z\.]*@.*\.[a-z]*[a-z]" />
+		</xs:restriction>
+	</xs:simpleType>
 
+	<!-- Insert your element declarations here -->
+	<xs:element name="reservations">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="reservation" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="rtitle" type="xs:string"></xs:element>
+							<xs:element name="rname" type="xs:string"></xs:element>
+							<xs:element name="remail" type="email"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>

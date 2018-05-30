@@ -20,7 +20,7 @@
     Books books = bookApplication.getBooks();
     //if remove is selected
     if (reserved != null) {
-        bookApplication.getBooks().findBook(title).getInfo().setReserved(false);
+        bookApplication.getBooks().findBook(title).setReserved(false);
         //bookApplication.save();
         bookApplication.updateXML(books, bookFilePath);
 
@@ -52,24 +52,24 @@
 
         <%
             if (book != null) {
-                if (!book.getInfo().isReserved()) {
+                if (!book.isReserved()) {
                     //book
                     out.print("<p>This book is reserved</p>");
-                } else if (user != null && book != null && user.getUsername().equals(book.getInfo().getUserUsername())) {
+                } else if (user != null && book != null && user.getUsername().equals(book.getUserUsername())) {
                     out.print("<close><title>" + book.getTitle() + "</title></close>");
                 }
         %>
         <details>
-            <username><%= book.getInfo().getUserUsername()%></username>
+            <username><%= book.getUserUsername()%></username>
             <title><%= book.getTitle()%></title>
             <author><%= book.getAuthor()%></author>
             <description><%= book.getDescription()%></description>	
             <category><%= book.getCategory()%></category>
             <date><%= book.getDate()%></date>
-            <condition><%= book.getInfo().getCondition()%></condition>
+            <condition><%= book.getCondition()%></condition>
         </details>
         <%
-            if (reserved == null && book.getInfo().isReserved()) {
+            if (reserved == null && book.isReserved()) {
         %>
 
     <email>	

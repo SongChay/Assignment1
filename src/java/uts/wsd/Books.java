@@ -22,7 +22,7 @@ public class Books implements Serializable {
     public ArrayList<Book> getReservedBooks() {
         ArrayList<Book> reservedBooks = new ArrayList<>();
         for (Book book : list) {
-            if (book.getInfo().isReserved()) {
+            if (book.isReserved()) {
                 reservedBooks.add(book);
             }
         }
@@ -33,7 +33,7 @@ public class Books implements Serializable {
         ArrayList<Book> quantityBooks = new ArrayList<>();
         for (Book book : list) {
             if (book.getTitle().matches(title)) {
-                if (book.getInfo().isReserved()) {
+                if (book.isReserved()) {
                     quantityBooks.add(book);
                 }
             }
@@ -45,7 +45,7 @@ public class Books implements Serializable {
     public ArrayList<Book> getBookByUser(String username) {
         ArrayList<Book> books = new ArrayList<>();
         for (Book book : list) {
-            if (book.getInfo().getUserUsername().equals(username)) {
+            if (book.getUserUsername().equals(username)) {
                 books.add(book);
             }
         }

@@ -27,10 +27,14 @@ public class Book implements Serializable {
     private String category;
     @XmlElement(name = "description")
     private String description;
+    @XmlElement(name = "condition")
+    private String condition;
+    @XmlElement(name = "userUsername")   
+	private String userUsername;
+    @XmlElement(name = "reserved")   
+	private boolean reserved;
 
-    @XmlElement(name = "info")
-    private Info info;
-
+  
     @XmlElementWrapper
     @XmlElement(name = "reservation")
     private ArrayList<Reserve> reserves = new ArrayList<>();
@@ -39,7 +43,7 @@ public class Book implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
-    public Book(Integer id, String title, String author, String date, String category, String description, Info info ) {
+    public Book(Integer id, String title, String author, String date, String category, String description,String condition, String userUsername, boolean reserved  ) {
         super();
         this.id = id;
         this.title = title;
@@ -47,8 +51,10 @@ public class Book implements Serializable {
         this.date = date;
         this.category = category;
         this.description = description;
-        this.info = info;
-       
+        
+       this.condition = condition;
+        this.userUsername = userUsername;
+        this.reserved = reserved;
     }
 
     public int getId() {
@@ -119,13 +125,31 @@ public class Book implements Serializable {
         this.date = date;
     }
 
-    public Info getInfo() {
-        return info;
+    public String getCondition() {
+        return condition;
     }
 
-    public void setInfo(Info info) {
-        this.info = info;
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
+
+    public String getUserUsername() {
+        return userUsername;
+    }
+
+    public void setUserUsername(String userUsername) {
+        this.userUsername = userUsername;
+    }
+
+    public boolean isReserved() {
+        return reserved;
+    }
+
+    public void setReserved(boolean reserved) {
+        this.reserved = reserved;
+    }
+
+  
 
     
 

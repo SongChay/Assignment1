@@ -36,7 +36,7 @@
           //    for (String s : bookApplication.getBooks().getListTitle()){
             if (books.getQuantityBooks(book.getTitle()).contains(book)) {
 
-                if (book.getInfo().isReserved()) {
+                if (book.isReserved()) {
 
                     if (bookApplication.getBooks().getQuantityBooks(book.getTitle()).isEmpty() == false) {
 
