@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
-@XmlRootElement(name="books")
+@XmlRootElement(name="books", namespace="http://www.uts.edu.au/31284/wsd-books")
 public class Books implements Serializable {
 
     @XmlElement(name = "book")
