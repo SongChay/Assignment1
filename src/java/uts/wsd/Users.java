@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name = "users")
 public class Users implements Serializable {
 
     @XmlElement(name = "user")

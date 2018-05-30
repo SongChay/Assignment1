@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 
 import com.sun.prism.shader.Texture_Color_AlphaTest_Loader;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Book implements Serializable {
