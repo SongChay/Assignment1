@@ -70,12 +70,15 @@
             
         </details>
     
-    <re><titler><%= book.getTitle() %></titler></re>
+        
         <%
             if (reserved == null && book.isReserved()) {
         %>
 
-    
+    <email>	
+        <title><%= book.getTitle()%></title>
+
+    </email>
 
     <%
     } else {
@@ -114,5 +117,5 @@
     %> 
 </body>
 </c:set>
-<c:import url="WEB-INF/bookdetails.xsl" var="xslt" />
+<c:import url="WEB-INF/reservation.xsl" var="xslt" />
 <x:transform xml="${xmltext}" xslt="${xslt}" />

@@ -110,7 +110,9 @@
         </form>
     </xsl:template>
         
-	
+	  <xsl:template match="re">
+              <a href="reservation.jsp?booktitle={titler}">Reserve <xsl:value-of select="titler"/> </a>
+    </xsl:template>
 	
 	
     <xsl:template match="reserve">
