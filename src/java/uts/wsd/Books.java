@@ -15,7 +15,6 @@ public class Books implements Serializable {
     @XmlElement(name = "book")
     private ArrayList<Book> list = new ArrayList<>();
     
-   
     public Books() {
         // TODO Auto-generated constructor stub
     }
@@ -41,7 +40,6 @@ public class Books implements Serializable {
         }
         return quantityBooks;
     }
- 
 
     public ArrayList<Book> getBookByUser(String username) {
         ArrayList<Book> books = new ArrayList<>();
@@ -56,16 +54,17 @@ public class Books implements Serializable {
     public void addBook(Book book) {
         list.add(book);
     }
-
+    
     public Book removeBook(String title) {
 
         //Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
         Iterator<Book> iter = list.iterator();
-        while (iter.hasNext()) {
+        int i = 0;
+        while (iter.hasNext() && i == 0) {
             Book book = iter.next();
-
             if (book.getTitle().equals(title)) {
                 iter.remove();
+                i++;
             }
         }
 
@@ -81,8 +80,6 @@ public class Books implements Serializable {
         return list;
     }
 
-   
-
     public int getID(String title) {
         for (Book book : list) {
             if (book.getTitle().equals(title)) {
@@ -95,6 +92,20 @@ public class Books implements Serializable {
     public Book findBook(String title) {
 
         for (Book book : list) {
+            if (book.getTitle().equals(title)) {
+                return book;
+            }
+        }
+        return null;
+    }
+    
+    public Book iterFindBook(String title) {
+
+        //Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
+        Iterator<Book> iter = list.iterator();
+        while (iter.hasNext()) {
+            Book book = iter.next();
+
             if (book.getTitle().equals(title)) {
                 return book;
             }

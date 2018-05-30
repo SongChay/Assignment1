@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" import="uts.wsd.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -14,7 +15,6 @@
 %>
 
 <c:set var="xmltext">
-
     <body>
     <navbar>
         <%
@@ -25,31 +25,29 @@
             }
         %>
     </navbar>
-
     <books></books>
 
     <%
+        //ArrayList<Book> printedBooks = new ArrayList<Book>();
         Books books = bookApplication.getBooks();
-
+        //removeBook
+        int i = 0;
         for (Book book : bookApplication.getBooks().getList()) {
+
             Integer quantity = bookApplication.getBooks().getQuantityBooks(book.getTitle()).size();
-          //    for (String s : bookApplication.getBooks().getListTitle()){
+            //    for (String s : bookApplication.getBooks().getListTitle()){
             if (books.getQuantityBooks(book.getTitle()).contains(book)) {
-
                 if (book.isReserved()) {
-
-                    if (bookApplication.getBooks().getQuantityBooks(book.getTitle()).isEmpty() == false) {
-
-                        out.print("<book><category>" + book.getCategory() + "</category><author>" + book.getAuthor() + "</author><title>" + book.getTitle() + "</title><quantity>" + quantity + "</quantity></book>");
-
+                    if (bookApplication.getBooks().getQuantityBooks(book.getTitle()).isEmpty() == false && i < book.getId()) {
+                        i = book.getId();
+                            out.print("<book><category>" + book.getCategory() + "</category><author>" + book.getAuthor() + "</author><title>" + book.getTitle() + "</title><quantity>" + quantity + "</quantity></book>");
                     }
                 }
             }
-
         }
 
-    %>
 
+    %>
 
 </body>
 

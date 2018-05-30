@@ -62,7 +62,7 @@
     <xsl:template match="success">
         <p>Book Successfully Created</p>
         <p>
-            Click <a href="index.jsp">here</a> to go back to the main page.
+            Click <a href="index.jsp" >here</a> to go back to the main page.
         </p>
     </xsl:template>
 

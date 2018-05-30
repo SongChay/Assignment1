@@ -13,9 +13,14 @@
                     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
                     font-size: 30px;
                     }
+                    
                     table {
-                    padding: 2px;     
+                    padding: 2px;  
+                    margin-left:10%;   
                    
+                    }
+                    .books {
+                    margin-top: 10px;
                     }
                     
                     th, tr, td {
@@ -31,10 +36,12 @@
                     justify-content: space-between;
                     padding: 16px;
                     }
+                    
                     .brand {
                     text-decoration:none;
                     color: #fff;
                     }
+                    
                     .navbar-button {
                     margin-right: 50px;
                     text-decoration:none;
@@ -79,23 +86,18 @@
     </xsl:template>
 	
     <xsl:template match="books">
-        <table border = "1" width = "100%">
+        <table class = "books" border = "1" width = "80%">
             <tr>        
                 <th width = "25%"> Book title</th>
                 <th width = "25%"> Book Author</th>
                 <th width = "25%"> Category</th>
-                <th width = "25%"> Quantity</th>
-                
-            </tr>
-            
+                <th width = "25%"> Quantity</th>        
+            </tr>    
         </table>
-        
     </xsl:template>
         
     <xsl:template match="book">
-        
-        <table border = "1" width = "100%">
-
+        <table border = "1" width = "80%">
             <tr>
                 <td width = "25%"> 
                     <a href="bookdetails.jsp?booktitle={title}"> 
@@ -114,6 +116,5 @@
             </tr>
         </table>
     </xsl:template>
-              
            
 </xsl:stylesheet>
