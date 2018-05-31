@@ -28,6 +28,22 @@ public class Books implements Serializable {
         }
         return reservedBooks;
     }
+    
+    public Book getReservedBookR(boolean s){
+        for (Book book : list) {
+            if (book.isReserved() == s) {
+                return book;
+            }
+        }
+        return null;
+    }
+    
+    public Book getByCondition(String condition){
+        for(Book book : list)
+            if(book.getCondition().equals(condition))
+                return book;
+        return null;
+    }
 
     public ArrayList<Book> getQuantityBooks(String title) {
         ArrayList<Book> quantityBooks = new ArrayList<>();
@@ -49,6 +65,14 @@ public class Books implements Serializable {
             }
         }
         return books;
+    }
+    
+    public Book getBookUser(String username) {
+        for (Book book : list){
+            if (book.getUserUsername().equals(username))
+                return book;
+        }
+        return null;
     }
 
     public void addBook(Book book) {
