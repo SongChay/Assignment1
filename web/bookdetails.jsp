@@ -31,6 +31,11 @@
         //bookApplication.getBooks().findBook(title).setReserved(false);
         //bookApplication.save();
         bookApplication.getBooks().removeBook(title);
+        int count = 1;
+        for (Book bookUpdate : bookApplication.getBooks().getList()) {
+            bookUpdate.setId(count);
+            count ++;
+        }
         bookApplication.updateXML(books, bookFilePath);
         //want to redirect to page.
         response.sendRedirect("/MyCoolBookApp/profile.jsp");
