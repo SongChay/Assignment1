@@ -32,8 +32,7 @@
         Books books = bookApplication.getBooks();
         //removeBook
         int i = 0;
-        for (Book book : bookApplication.getBooks().getList()) {
-
+        for (Book book : bookApplication.getBooks().listBookByTitle()) {
             Integer quantity = bookApplication.getBooks().getQuantityBooks(book.getTitle()).size();
             //    for (String s : bookApplication.getBooks().getListTitle()){
             if (books.getQuantityBooks(book.getTitle()).contains(book)) {

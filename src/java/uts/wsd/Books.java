@@ -8,13 +8,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
-@XmlRootElement(name="books", namespace="http://www.uts.edu.au/31284/wsd-books")
+@XmlRootElement(name = "books", namespace = "http://www.uts.edu.au/31284/wsd-books")
 public class Books implements Serializable {
 
     @XmlElement(name = "book")
     private ArrayList<Book> list = new ArrayList<>();
-    
+
     public Books() {
         // TODO Auto-generated constructor stub
     }
@@ -28,8 +27,8 @@ public class Books implements Serializable {
         }
         return reservedBooks;
     }
-    
-    public Book getReservedBookR(boolean s){
+
+    public Book getReservedBookR(boolean s) {
         for (Book book : list) {
             if (book.isReserved() == s) {
                 return book;
@@ -37,11 +36,13 @@ public class Books implements Serializable {
         }
         return null;
     }
-    
-    public Book getByCondition(String condition){
-        for(Book book : list)
-            if(book.getCondition().equals(condition))
+
+    public Book getByCondition(String condition) {
+        for (Book book : list) {
+            if (book.getCondition().equals(condition)) {
                 return book;
+            }
+        }
         return null;
     }
 
@@ -59,6 +60,7 @@ public class Books implements Serializable {
 
     public ArrayList<Book> getBookByUser(String username) {
         ArrayList<Book> books = new ArrayList<>();
+        list.forEach(b -> System.out.println(b.getId() + ", " + b.getTitle()));
         for (Book book : list) {
             if (book.getUserUsername().equals(username)) {
                 books.add(book);
@@ -66,11 +68,12 @@ public class Books implements Serializable {
         }
         return books;
     }
-    
+
     public Book getBookUser(String username) {
-        for (Book book : list){
-            if (book.getUserUsername().equals(username))
+        for (Book book : list) {
+            if (book.getUserUsername().equals(username)) {
                 return book;
+            }
         }
         return null;
     }
@@ -78,7 +81,7 @@ public class Books implements Serializable {
     public void addBook(Book book) {
         list.add(book);
     }
-    
+
     public Book removeBook(String title) {
 
         //Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
@@ -98,6 +101,33 @@ public class Books implements Serializable {
         //   }
         //} 
         return null;
+    }
+
+    public ArrayList<Book> listBookByTitle() {
+        ArrayList<Book> listedBooks = new ArrayList<>();
+        int i = 0;
+
+        for (Book listBooks : list) {
+            if (i < list.size()) {
+                i++;
+                boolean duplicateFound = false;
+                for (Book listBooks2 : listedBooks) {
+                    if (listBooks2.getTitle().matches(listBooks.getTitle())) {
+                        duplicateFound = true;
+                    }
+                }
+                if (duplicateFound == false) {
+                    listedBooks.add(listBooks);
+                }
+            }
+
+        }
+        if (list.isEmpty() == false) {
+            return listedBooks;
+        } else {
+            return null;
+        }
+
     }
 
     public ArrayList<Book> getList() {
@@ -122,7 +152,17 @@ public class Books implements Serializable {
         }
         return null;
     }
-    
+
+    public Book findBookById(String id) {
+
+        for (Book book : list) {
+            if (String.valueOf(book.getId()).equals(id)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
     public Book iterFindBook(String title) {
 
         //Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.

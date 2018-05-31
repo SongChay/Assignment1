@@ -13,10 +13,16 @@
     User user = (User) session.getAttribute("user");
     String reserved = request.getParameter("reserved");
     String title = request.getParameter("booktitle");
+    String id = request.getParameter("id");
     String reserverName = request.getParameter("reserverName");
     String reserverEmail = request.getParameter("reserverEmail");
     String closebook = request.getParameter("closebook");
-    Book book = bookApplication.getBooks().findBook(title);
+    Book book = null;
+    if (title != null) {
+       book = bookApplication.getBooks().findBook(title);
+    } else if (id != null) {
+       book = bookApplication.getBooks().findBookById(id);
+    }
     Books books = bookApplication.getBooks();
     //if remove is selected
     if (reserved != null) {

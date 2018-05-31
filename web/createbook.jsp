@@ -33,6 +33,7 @@
         //Integer id = (bookApplication.getBooks().getList().size() + 1);
         int id = bookApplication.getBooks().getID(request.getParameter("title"));
         if (id != -1) {
+         id = (bookApplication.getBooks().getList().size()) + 1;
        //  Info info = new Info(condition, user.getUsername(), true);
         Book book = new Book(id, title, author, date, category, abstractText, condition, user.getUsername(), true);
         Books books = bookApplication.getBooks();

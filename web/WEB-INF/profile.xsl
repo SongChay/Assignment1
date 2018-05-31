@@ -68,13 +68,20 @@
 	
     <xsl:template match="book">
         <p>
-            <a href="bookdetails.jsp?booktitle={title}">
-                <xsl:value-of select="title"></xsl:value-of>
+              <xsl:value-of select="title"></xsl:value-of>
+            - <xsl:value-of select="status"></xsl:value-of>
+        </p>
+    </xsl:template>
+	
+    <xsl:template match="book-by-id">
+        <p>
+            <a href="bookdetails.jsp?id={bookid}">
+                <xsl:value-of select="bookid"></xsl:value-of>
             </a>
             - <xsl:value-of select="status"></xsl:value-of>
         </p>
     </xsl:template>
-
+    
     <xsl:template match="navbar">
         <nav class="navbar">
             <h1>
