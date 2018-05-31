@@ -12,7 +12,6 @@ import com.sun.prism.shader.Texture_Color_AlphaTest_Loader;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Book implements Serializable {
 
@@ -24,19 +23,17 @@ public class Book implements Serializable {
     private String author;
     @XmlElement(name = "date")
     private String date;
- 
     @XmlElement(name = "category")
     private String category;
     @XmlElement(name = "description")
     private String description;
     @XmlElement(name = "condition")
     private String condition;
-    @XmlElement(name = "userUsername")   
-	private String userUsername;
-    @XmlElement(name = "reserved")   
-	private boolean reserved;
+    @XmlElement(name = "userUsername")
+    private String userUsername;
+    @XmlElement(name = "reserved")
+    private boolean reserved;
 
-  
     @XmlElementWrapper
     @XmlElement(name = "reservation")
     private ArrayList<Reserve> reserves = new ArrayList<>();
@@ -45,7 +42,7 @@ public class Book implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
-    public Book(Integer id, String title, String author, String date, String category, String description,String condition, String userUsername, boolean reserved  ) {
+    public Book(Integer id, String title, String author, String date, String category, String description, String condition, String userUsername, boolean reserved) {
         super();
         this.id = id;
         this.title = title;
@@ -53,8 +50,7 @@ public class Book implements Serializable {
         this.date = date;
         this.category = category;
         this.description = description;
-        
-       this.condition = condition;
+        this.condition = condition;
         this.userUsername = userUsername;
         this.reserved = reserved;
     }
@@ -83,12 +79,10 @@ public class Book implements Serializable {
         this.category = category;
     }
 
-   
-
     public void addReserve(Reserve reserve) {
         reserves.add(reserve);
     }
-    
+
     public void removeReserve(Reserve reserve) {
         reserves.remove(reserve);
     }
@@ -116,8 +110,6 @@ public class Book implements Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
-
-   
 
     public String getDate() {
         return date;
@@ -150,10 +142,5 @@ public class Book implements Serializable {
     public void setReserved(boolean reserved) {
         this.reserved = reserved;
     }
-
-  
-
-    
-
 
 }

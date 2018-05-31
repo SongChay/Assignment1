@@ -39,7 +39,7 @@
                 if (book.isReserved()) {
                     if (bookApplication.getBooks().getQuantityBooks(book.getTitle()).isEmpty() == false && i < book.getId()) {
                         i = book.getId();
-                            out.print("<book><category>" + book.getCategory() + "</category><author>" + book.getAuthor() + "</author><title>" + book.getTitle() + "</title><quantity>" + quantity + "</quantity></book>");
+                        out.print("<book><category>" + book.getCategory() + "</category><author>" + book.getAuthor() + "</author><title>" + book.getTitle() + "</title><quantity>" + quantity + "</quantity></book>");
                     }
                 }
             }

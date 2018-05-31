@@ -8,22 +8,21 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class Reserve implements Serializable {
-        
-        
-        private String rtitle;
-	private String rname;
-	private String remail;
 
-	public Reserve() {
-		// TODO Auto-generated constructor stub
-	}
+    private String rtitle;
+    private String rname;
+    private String remail;
 
-	public Reserve(String title, String name, String email) {
-		super();
-                this.rtitle= title;
-		this.rname = name;
-		this.remail = email;
-	}
+    public Reserve() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public Reserve(String title, String name, String email) {
+        super();
+        this.rtitle = title;
+        this.rname = name;
+        this.remail = email;
+    }
 
     public String getTitle() {
         return rtitle;
@@ -33,20 +32,20 @@ public class Reserve implements Serializable {
         this.rtitle = title;
     }
 
-	public String getName() {
-		return rname;
-	}
+    public String getName() {
+        return rname;
+    }
 
-	public void setName(String name) {
-		this.rname = name;
-	}
+    public void setName(String name) {
+        this.rname = name;
+    }
 
-	public String getEmail() {
-		return remail;
-	}
+    public String getEmail() {
+        return remail;
+    }
 
-	public void setEmail(String email) {
-		this.remail = email;
-	}
+    public void setEmail(String email) {
+        this.remail = email;
+    }
 
 }

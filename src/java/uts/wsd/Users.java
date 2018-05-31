@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "users", namespace="http://www.uts.edu.au/31284/wsd-users")
+@XmlRootElement(name = "users", namespace = "http://www.uts.edu.au/31284/wsd-users")
 public class Users implements Serializable {
 
     @XmlElement(name = "user")
@@ -19,6 +19,7 @@ public class Users implements Serializable {
         list.add(user);
     }
 
+    //Check if user exists, compare username.
     public boolean userExists(String username) {
         for (User user : list) {
             if (user.getUsername().equals(username)) {

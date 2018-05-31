@@ -23,7 +23,6 @@
         bookApplication.getBooks().findBook(title).setReserved(false);
         //bookApplication.save();
         bookApplication.updateXML(books, bookFilePath);
-
     }
 
     if (closebook != null) {

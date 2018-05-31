@@ -18,6 +18,7 @@ public class Books implements Serializable {
         // TODO Auto-generated constructor stub
     }
 
+    //Return a new array containing only books that have not been reserved.
     public ArrayList<Book> getReservedBooks() {
         ArrayList<Book> reservedBooks = new ArrayList<>();
         for (Book book : list) {
@@ -46,6 +47,7 @@ public class Books implements Serializable {
         return null;
     }
 
+    //Return new array of books with matching title.
     public ArrayList<Book> getQuantityBooks(String title) {
         ArrayList<Book> quantityBooks = new ArrayList<>();
         for (Book book : list) {
@@ -69,6 +71,7 @@ public class Books implements Serializable {
         return books;
     }
 
+    //Return a new array of books listed by user.
     public Book getBookUser(String username) {
         for (Book book : list) {
             if (book.getUserUsername().equals(username)) {
@@ -82,6 +85,7 @@ public class Books implements Serializable {
         list.add(book);
     }
 
+    //Remove book by title. 
     public Book removeBook(String title) {
 
         //Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics.
@@ -94,15 +98,10 @@ public class Books implements Serializable {
                 i++;
             }
         }
-
-        //for (Book book : list) {
-        //   if (book.getTitle().equals(title)) {
-        //        list.remove(book);
-        //   }
-        //} 
         return null;
     }
 
+    //Return a new array of ONLY one of each book title.
     public ArrayList<Book> listBookByTitle() {
         ArrayList<Book> listedBooks = new ArrayList<>();
         int i = 0;
@@ -153,6 +152,7 @@ public class Books implements Serializable {
         return null;
     }
 
+    //Return book by Id
     public Book findBookById(String id) {
 
         for (Book book : list) {

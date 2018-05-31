@@ -15,14 +15,14 @@
     String submitted = request.getParameter("submitted");
     User user = (User) session.getAttribute("user");
     boolean bookexists = false;
-    
+
     if (submitted != null) {
         Book book = bookApplication.getBooks().findBook(request.getParameter("title"));
         if (book != null) {
             bookexists = true;
         }
     }
-   
+
     if (submitted != null) {
         String title = request.getParameter("title");
         String author = request.getParameter("author");
@@ -33,24 +33,22 @@
         //Integer id = (bookApplication.getBooks().getList().size() + 1);
         int id = bookApplication.getBooks().getID(request.getParameter("title"));
         if (id != -1) {
-         id = (bookApplication.getBooks().getList().size()) + 1;
-       //  Info info = new Info(condition, user.getUsername(), true);
-        Book book = new Book(id, title, author, date, category, abstractText, condition, user.getUsername(), true);
-        Books books = bookApplication.getBooks();
-        bookApplication.getBooks().addBook(book);
-        bookApplication.save();
-        bookApplication.updateXML(books, bookFilepath);
-       
-        }   
-        else {
-        Integer noID = (bookApplication.getBooks().getList().size()) + 1;
-        Info info = new Info(condition, user.getUsername(), true);
-        Book book = new Book(noID, title, author, date, category, abstractText, condition, user.getUsername(), true);
-        Books books = bookApplication.getBooks();
-        bookApplication.getBooks().addBook(book);
-        bookApplication.save();
-        bookApplication.updateXML(books, bookFilepath);
-        
+            id = (bookApplication.getBooks().getList().size()) + 1;
+            //  Info info = new Info(condition, user.getUsername(), true);
+            Book book = new Book(id, title, author, date, category, abstractText, condition, user.getUsername(), true);
+            Books books = bookApplication.getBooks();
+            bookApplication.getBooks().addBook(book);
+            bookApplication.save();
+            bookApplication.updateXML(books, bookFilepath);
+
+        } else {
+            Integer noID = (bookApplication.getBooks().getList().size()) + 1;
+            Book book = new Book(noID, title, author, date, category, abstractText, condition, user.getUsername(), true);
+            Books books = bookApplication.getBooks();
+            bookApplication.getBooks().addBook(book);
+            bookApplication.save();
+            bookApplication.updateXML(books, bookFilepath);
+
         }
     }
 %>
@@ -72,14 +70,14 @@
 
     <%
         if (user != null) {
-            
-                out.print("<createbook></createbook>");
-            if (submitted != null){
+
+            out.print("<createbook></createbook>");
+            if (submitted != null) {
     %>
     <success></success>
         <%
-              }  }
-             else {
+                }
+            } else {
                 out.print("Please log in to create a book");
             }
         %>

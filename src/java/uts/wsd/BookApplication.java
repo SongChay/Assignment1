@@ -26,7 +26,7 @@ public class BookApplication implements Serializable {
 
     public void setBookFilePath(String bookFilePath) throws JAXBException, IOException {
         this.bookFilePath = bookFilePath;
-        
+
         JAXBContext jc = JAXBContext.newInstance(Books.class);
         Unmarshaller u = jc.createUnmarshaller();
         FileInputStream fin = new FileInputStream(bookFilePath);
@@ -44,7 +44,7 @@ public class BookApplication implements Serializable {
     public void updateXML(Books books, String bookFilePath) throws Exception {
         this.books = books;
         this.bookFilePath = bookFilePath;
-        
+
         JAXBContext jc = JAXBContext.newInstance(Books.class);
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

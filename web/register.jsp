@@ -49,13 +49,12 @@
 </head>
 <%
     if (submitted != null && !users.userExists(username) && passwordsMatch) {
-       
+
 %>
 <success>    
 
 </success>
-<%
-    userApplication.getUsers().addUser(new User(username, password, email));
+<%    userApplication.getUsers().addUser(new User(username, password, email));
     userApplication.save();
     userApplication.updateXML(users, userFilePath);
 } else {
@@ -69,7 +68,8 @@
 <p>The username <%=username%> already exists</p>
 
 <%
-}}
+        }
+    }
 %>
 
 

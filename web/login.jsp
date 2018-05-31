@@ -42,11 +42,11 @@
         } else {
             out.print("<main><username>" + username + "</username></main>");
             if (submitted != null) {
-                 %>
-    <fail></fail>
- <%           }
-        }
     %>
+    <fail></fail>
+        <%           }
+            }
+        %>
 </body>
 </c:set>
 <c:import url="WEB-INF/login.xsl" var="xslt" />
