@@ -28,7 +28,8 @@
                 }
 
                 for (Book book : books) {
-                    out.print("<book-by-id><bookid>" + book.getId() + "</bookid><book>" + book.getTitle() + "</book><status>" + (book.isReserved() ? "listing" : "reserved") + "</status></book-by-id>");
+                    String titleBook = book.getTitle();
+                    out.print("<book-by-id><bookid>" + book.getId() + "</bookid><book>" + titleBook + "</book><status>" + (book.isReserved() ? "listing" : "reserved") + "</status></book-by-id>");
                 }
 
                 out.print("</main>");
