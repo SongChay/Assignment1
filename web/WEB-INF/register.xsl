@@ -31,6 +31,9 @@
                     text-decoration:none;
                     color: #fff;
                     }
+                    input {
+                    width: 125px;
+                    }
                 </style>
             </head>
             <body>

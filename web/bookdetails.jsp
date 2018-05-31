@@ -34,7 +34,7 @@
         int count = 1;
         for (Book bookUpdate : bookApplication.getBooks().getList()) {
             bookUpdate.setId(count);
-            count ++;
+            count++;
         }
         bookApplication.updateXML(books, bookFilePath);
         //want to redirect to page.
@@ -72,15 +72,15 @@
             <category><%= book.getCategory()%></category>
             <date><%= book.getDate()%></date>
             <condition><%= book.getCondition()%></condition>
-            
-        </details>
-    
-    <re><titler><%= book.getTitle() %></titler></re>
-        <%
-            if (reserved == null && book.isReserved()) {
-        %>
 
-    
+        </details>
+
+    <re><titler><%= book.getTitle()%></titler></re>
+            <%
+                if (reserved == null && book.isReserved()) {
+            %>
+
+
 
     <%
     } else {

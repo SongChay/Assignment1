@@ -104,7 +104,8 @@
                         <option value="Romantic">Romance</option>
                         <option value="Biography">Biography</option>
                         <option value="Business">Business</option>
-                        <option value="Technology">Technology</option>                        
+                        <option value="Technology">Technology</option>
+                        <option value="Fantasy">Fantasy</option>                        
                     </select>
                 </td>
                 <tr>

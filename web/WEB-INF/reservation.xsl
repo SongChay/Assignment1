@@ -110,9 +110,6 @@
         </form>
     </xsl:template>
         
-	 
-	
-	
     <xsl:template match="reserve">
         <p>
             <xsl:value-of select="name"></xsl:value-of> - <xsl:value-of select="email"></xsl:value-of>

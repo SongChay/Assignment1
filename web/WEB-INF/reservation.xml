@@ -2,8 +2,8 @@
 
 
 <reservations xmlns="http://www.uts.edu.au/31284/wsd-reservations"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-reservations reservation.xsd">
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-reservations reservation.xsd">
     <reservation> 
         <rtitle></rtitle>
         <rname></rname>

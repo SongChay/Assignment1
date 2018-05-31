@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <users xmlns="http://www.uts.edu.au/31284/wsd-users"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-users users.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-users users.xsd">
     <user>
-        <username>bobby</username>
-        <password>brown</password>
-        <email>bbrown@hotmail.com</email>
+        <username>bottle</username>
+        <password>water</password>
+        <email>bw@hotmail.com</email>
     </user>
     <user>
-        <username>fish</username>
-        <password>face</password>
-         <email>fface@hotmail.com</email>
+        <username>fried</username>
+        <password>food</password>
+        <email>ff@outlookcom</email>
+    </user>
+    <user>
+        <username>test</username>
+        <password>test</password>
+        <email>tt@gmail.com</email>
+    </user>
+    <user>
+        <username>soy</username>
+        <password>sauce</password>
+        <email>ss@gmail.com</email>
     </user>
 </users>
