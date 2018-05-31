@@ -67,5 +67,20 @@
 
         <reserved>true</reserved>
     </book>
+    
+    <book id="5">
+        <title>Happy duck</title>
+        <category>Romance</category>
+        <author>Adam Johnson</author>
+           
+        <date>18-9-1999</date>
+            
+        <description>There are 3 happy ducks swiming in the pound.</description>
+       
+        <condition>Poor</condition>
+        <userUsername>soy</userUsername>
+
+        <reserved>true</reserved>
+    </book>
 
 </books>
