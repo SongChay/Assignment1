@@ -77,6 +77,8 @@
         <p>
             <a href="bookdetails.jsp?id={bookid}">
                 <xsl:value-of select="bookid"></xsl:value-of>
+            </a> - <a href="bookdetails.jsp?booktitle={book}">
+                <xsl:value-of select="book"></xsl:value-of>
             </a>
             - <xsl:value-of select="status"></xsl:value-of>
         </p>

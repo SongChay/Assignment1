@@ -67,10 +67,10 @@
             <category><%= book.getCategory()%></category>
             <date><%= book.getDate()%></date>
             <condition><%= book.getCondition()%></condition>
-            
+
         </details>
-    
-        
+
+
         <%
             if (reserved == null && book.isReserved()) {
         %>

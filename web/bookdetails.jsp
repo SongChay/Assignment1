@@ -18,10 +18,12 @@
     String reserverEmail = request.getParameter("reserverEmail");
     String closebook = request.getParameter("closebook");
     Book book = null;
+
+    //if title available
     if (title != null) {
-       book = bookApplication.getBooks().findBook(title);
+        book = bookApplication.getBooks().findBook(title);
     } else if (id != null) {
-       book = bookApplication.getBooks().findBookById(id);
+        book = bookApplication.getBooks().findBookById(id);
     }
     Books books = bookApplication.getBooks();
     //if remove is selected
@@ -32,10 +34,8 @@
 
     }
 
+    //Remove Book
     if (closebook != null) {
-        //don't need the lower 2 trash lines.
-        //bookApplication.getBooks().findBook(title).setReserved(false);
-        //bookApplication.save();
         bookApplication.getBooks().removeBook(title);
         int count = 1;
         for (Book bookUpdate : bookApplication.getBooks().getList()) {
@@ -64,9 +64,10 @@
         <%
             if (book != null) {
                 if (!book.isReserved()) {
-                    //book
+                    //print when book is reserved
                     out.print("<p>This book is reserved</p>");
                 } else if (user != null && book != null && user.getUsername().equals(book.getUserUsername())) {
+                    //user login...
                     out.print("<close><title>" + book.getTitle() + "</title></close>");
                 }
         %>
@@ -78,9 +79,8 @@
             <category><%= book.getCategory()%></category>
             <date><%= book.getDate()%></date>
             <condition><%= book.getCondition()%></condition>
-
         </details>
-
+        <% ////reserve button %>
     <re><titler><%= book.getTitle()%></titler></re>
             <%
                 if (reserved == null && book.isReserved()) {
@@ -93,14 +93,11 @@
     %>
 
 
-    <%
-        bookApplication.getBooks().findBook(title).addReserve(new Reserve(book.getTitle(), reserverName, reserverEmail));
-        //bookApplication.save();
+    <%  
+        //addReserve
+        bookApplication.getBooks().findBook(title).addReserve(new Reserve(book.getTitle(), reserverName, reserverEmail));   
         bookApplication.updateXML(books, bookFilePath);
-        //Reserve reserve = book.bookApplication.getReserves();
-        //ArrayList reserve = bookApplication.getBooks().findBook(title).getReserves();
         for (Reserve reserve : bookApplication.getBooks().findBook(title).getReserves()) {
-            //if (reserve.getName().equals(reserverName) && reserve.getEmail().equals(reserverEmail)){
             if (reserve.getName().isEmpty() && reserve.getEmail().isEmpty()) {
                 bookApplication.getBooks().findBook(title).removeReserve(reserve);
                 break;
@@ -114,7 +111,7 @@
     </reserve>
     <%
                 break;
-                //}
+              
             }
         }
     } else {
